@@ -22,7 +22,7 @@ export default function Menu() {
     const changeWidth = () => {
       setScreenWidth(window.innerWidth);
     };
-
+    
     window.addEventListener("resize", changeWidth);
   }, []);
 
@@ -40,7 +40,7 @@ export default function Menu() {
             {NavbarData.map((item, index) => {
               return (
                 <li key={index} onClick={toggleNav}>
-                  <span>{t(item.title)}</span>
+                  <span>{t(item.title).toUpperCase()}</span>
                 </li>
               );
             })}
