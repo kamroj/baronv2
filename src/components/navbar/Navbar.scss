@@ -2,6 +2,7 @@ $min-nav-height: 60px;
 $edge-items-margin: 20px;
 
 .navbar-container {
+  color: #c2c2c2;
   background-color: rgba(128, 128, 128, 0.16);
   display: flex;
   justify-content: center;
@@ -62,14 +63,6 @@ $edge-items-margin: 20px;
     align-items: center;
     height: auto;
     width: 100%;
-  }
-
-  .navbar-list-container:nth-child(1) {
-    height: $min-nav-height;
-  }
-
-  .navbar-list-container:nth-last-child(1) {
-    border-bottom: 1px solid #00900062;
   }
 
   .navbar-list-container > li {

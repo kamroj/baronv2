@@ -4,6 +4,7 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetecotr from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
+import 'bootstrap/dist/js/bootstrap.js'
 
 import './index.scss';
 import App from './App';
@@ -13,7 +14,7 @@ i18n
   .use(LanguageDetecotr)
   .use(HttpApi)
   .init({
-    fallbackLng: "en",
+    fallbackLng: "gb",
     detection: {
       order: ['cookie', 'localStorage', 'path', 'subdomain', 'htmlTag'],
       caches: ['cookie']

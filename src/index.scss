@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 html, 
 body, 
 #root {
@@ -7,7 +9,6 @@ body,
 
 body {
   background-color: black;
-  color: #c2c2c2;
   font-family: "JetBrains Mono", monospace;
   margin: 0;
   -webkit-font-smoothing: antialiased;

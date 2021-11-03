@@ -5,6 +5,7 @@ import { useOutsideHook } from "../../hooks/useOutsideHook";
 import "./Navbar.scss";
 import { NavbarData } from "./NavbarData";
 import logo from "../../assets/images/logo.png";
+import Language from "./lang/Language";
 
 export default function Menu() {
   const { t } = useTranslation();
@@ -34,15 +35,18 @@ export default function Menu() {
         </button>
       </div>
       {(toggleMenu || screenWidth > 900) && (
-        <ul className="navbar-list-container">
-          {NavbarData.map((item, index) => {
-            return (
-              <li key={index} onClick={toggleNav}>
-                <span>{t(item.title)}</span>
-              </li>
-            );
-          })}
-        </ul>
+        <>
+          <ul className="navbar-list-container">
+            {NavbarData.map((item, index) => {
+              return (
+                <li key={index} onClick={toggleNav}>
+                  <span>{t(item.title)}</span>
+                </li>
+              );
+            })}
+          </ul>
+          <Language />
+        </>
       )}
     </div>
   );
