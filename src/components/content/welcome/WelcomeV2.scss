@@ -90,3 +90,83 @@ $logo-vw-width: 2.73vw;
   object-fit: cover;
   object-position: center top;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.welcome-menu-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-menu-top-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-menu-bottom-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+$menu-element-btn-top-btn-padding: 9vh;
+
+.welcome-menu-element-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: $menu-element-btn-top-btn-padding;
+  padding-bottom: $menu-element-btn-top-btn-padding;
+}
+
+.welcome-menu-element-container button {
+  color: whitesmoke;
+  background-color: transparent;
+  border: solid 1px;
+  width: 200px;
+  height: 50px;
+  border-color: rgb(0, 144, 0);
+}
+
+.welcome-menu-element-btn-top-side {
+  justify-content: center;
+  align-items: end;
+}
+
+.welcome-menu-element-btn-bottom-side {
+  justify-content: center;
+  align-items: start;
+}
+
+.welcome-menu-element-btn-center-side {
+  justify-content: center;
+  align-items: center;
+}
+
+$menu-element-btn-side-padding: 20vw;
+
+.welcome-menu-element-btn-left-side {
+  padding-left: $menu-element-btn-side-padding;
+}
+
+.welcome-menu-element-btn-right-side {
+  padding-right: $menu-element-btn-side-padding;
+}
