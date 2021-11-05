@@ -17,9 +17,15 @@ $background-color: #000000e0;
   width: 100%;
 }
 
-.navbar-logo {
+.navbar-logo-btn {
   height: 50px;
+  background-color: transparent;
+  border: none;
   margin-left: $edge-items-margin;
+}
+
+.navbar-logo {
+  height: 100%;
 }
 
 .navbar-items-container {

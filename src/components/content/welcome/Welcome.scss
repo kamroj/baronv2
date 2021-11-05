@@ -1,39 +1,85 @@
+@font-face {
+  font-family: 'vcr_osd_monoregular';
+  src: url('../../../assets/font/vcr_osd_mono_1.001-webfont.woff2') format('woff2'),
+       url('../../../assets/font/vcr_osd_mono_1.001-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//CONTENT
+
+.welcome-content-container {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
 .welcome-section {
   box-sizing: border-box;
   position: relative;
   height: 95vh;
 }
 
+//LOGO
+$logo-vw-width: 2.73vw;
+
+.welcome-baron-logo-conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: calc(55.64px + $logo-vw-width);
+}
+
 .welcome-baron-logo {
+  font-family: 'vcr_osd_monoregular';
   display: flex;
   position: relative;
   width: 28 vw;
   align-items: center;
   justify-content: center;
+  background: transparent;
+  border: none;
+  height: 60%;
+}
+
+.welcome-baron-logo-name {
+  color: whitesmoke;
+}
+
+.welcome-baron-logo-triangle-hovered,
+.welcome-baron-logo-triangle-not-hovered {
+  z-index: -1;
+  right: 0;
+  position: absolute;
+  border-style: solid;
+  border-width: calc(50px + $logo-vw-width) 0 calc(50px + $logo-vw-width) calc(74px + $logo-vw-width);
+}
+
+.welcome-baron-logo-triangle-not-hovered {
+  border-color: transparent transparent transparent rgb(10 94 10 / 40%);
+}
+
+.welcome-baron-logo-triangle-hovered {
+  -webkit-filter: drop-shadow(0px 0px 20px rgb(10 94 10));
+  filter: drop-shadow(0px 0px 20px rgb(10 94 10));
+  border-color: transparent transparent transparent rgb(10 94 10 / 100%);
 }
 
 .welcome-baron-logo-desc {
-  color: whitesmoke;
-  font-size: calc(55.64px + 2.73vw);
+  font-size: 0.24em;
 }
 
-.welcome-baron-logo-triangle {
-  z-index: -1;
-  right: 0;
-  border-radius: 2%;
-  position: absolute;
-  border-style: solid;
-  border-width: calc(50px + 2.73vw) 0 calc(50px + 2.73vw) calc(65px + 2.73vw);
-  border-color: transparent transparent transparent rgb(10 94 10 / 89%);
+.welcome-baron-logo-desc-letter-col {
+  color: green;
 }
 
-.welcome-content-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
+//BACKGROUND
 
 #welcome-background-video {
   position: absolute;
