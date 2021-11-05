@@ -44,8 +44,8 @@ export default function Menu() {
                 </li>
               );
             })}
+            <Language />
           </ul>
-          <Language />
         </>
       )}
     </div>

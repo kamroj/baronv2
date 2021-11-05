@@ -1,14 +1,19 @@
-$min-nav-height: 60px;
+$min-nav-height: 5vh;
 $edge-items-margin: 20px;
+$background-color: #000000e0;
 
 .navbar-container {
   color: #c2c2c2;
-  background-color: rgba(128, 128, 128, 0.16);
+  background-color: $background-color;
   display: flex;
+  position: sticky;
   justify-content: center;
   align-items: center;
   height: auto;
-  min-height: $min-nav-height;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: $min-nav-height;
   width: 100%;
 }
 
@@ -19,7 +24,7 @@ $edge-items-margin: 20px;
 
 .navbar-items-container {
   width: auto;
-  height: $min-nav-height;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +37,7 @@ $edge-items-margin: 20px;
   padding: 0;
   align-items: center;
   list-style: none;
-  height: $min-nav-height;
+  height: 100%;
   width: 100%;
 }
 
@@ -55,7 +60,10 @@ $edge-items-margin: 20px;
   }
 
   .navbar-list-container {
+    background-color: $background-color;
     display: flex;
+    position: absolute;
+    top: 100%;
     flex-direction: column;
     justify-content: center;
     margin: 0;

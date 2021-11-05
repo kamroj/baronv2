@@ -1,0 +1,46 @@
+.welcome-section {
+  box-sizing: border-box;
+  position: relative;
+  height: 95vh;
+}
+
+.welcome-baron-logo {
+  display: flex;
+  position: relative;
+  width: 28 vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-baron-logo-desc {
+  color: whitesmoke;
+  font-size: calc(55.64px + 2.73vw);
+}
+
+.welcome-baron-logo-triangle {
+  z-index: -1;
+  right: 0;
+  border-radius: 2%;
+  position: absolute;
+  border-style: solid;
+  border-width: calc(50px + 2.73vw) 0 calc(50px + 2.73vw) calc(65px + 2.73vw);
+  border-color: transparent transparent transparent rgb(10 94 10 / 89%);
+}
+
+.welcome-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#welcome-background-video {
+  position: absolute;
+  height: 95vh;
+  width: 100%;
+  filter: brightness(0.2) blur(5px);
+  z-index: -1;
+  object-fit: cover;
+  object-position: center top;
+}

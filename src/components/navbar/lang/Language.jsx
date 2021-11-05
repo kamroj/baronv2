@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import i18next from "i18next";
 import { LanguageData } from "./LanguageData";
@@ -7,7 +7,11 @@ import "./Language.scss";
 import "flag-icon-css/css/flag-icons.min.css";
 
 export default function Language() {
-  const [flag, setFlag] = useState(`flag-icon-${Cookies.get("i18next")}`);
+  const [flag, setFlag] = useState(undefined);
+
+  useEffect(() => {
+    setFlag(`flag-icon-${Cookies.get("i18next")}`);
+  }, []);
 
   function changeLang(code) {
     i18next.changeLanguage(code);
