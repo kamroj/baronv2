@@ -33,6 +33,7 @@ $logo-vw-width: 2.73vw;
   align-items: center;
   width: 100%;
   font-size: calc(55.64px + $logo-vw-width);
+  z-index: 0;
 }
 
 .welcome-baron-logo {
@@ -91,6 +92,7 @@ $logo-vw-width: 2.73vw;
 }
 
 .welcome-menu-container {
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   display: flex;
   flex-direction: column;

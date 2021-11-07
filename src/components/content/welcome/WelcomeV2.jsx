@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, scroller } from "react-scroll";
 import Video from "../../../assets/video/beer.webm";
-import { Key } from "../../../Keys";
 import { ElementNames, NavbarData, ScrollerProp } from "../../navbar/NavbarData";
 import "./WelcomeV2.scss";
 
 export default function WelcomeV2() {
+  const menuBtnWidth = "14vw";
+  const menuBtnHeight = "6vh";
+
   const { t } = useTranslation();
   const [logoHovered, setLogoHovered] = useState(false);
+  const [menuDisplayed, setMenuDisplayed] = useState(false);
+  const scrollTargetRef = useRef(null)
 
   function changeLogoHoveredState() {
     setLogoHovered(!logoHovered);
@@ -31,8 +36,7 @@ export default function WelcomeV2() {
   }
 
   function decorateDataWithPointsPositionOnCircle(data, radius, cx, cy) {
-    console.log(data)
-    let decoratedData = []
+    let decoratedData = [];
     let angleIncremental = 360 / data.length;
     let angle = 0;
 
@@ -45,47 +49,47 @@ export default function WelcomeV2() {
     return decoratedData;
   }
 
+  function toggleMenu() {
+    setMenuDisplayed(!menuDisplayed)
+    menuDisplayed ? enableBodyScroll(scrollTargetRef) : disableBodyScroll(scrollTargetRef)
+  }
+
   return (
-    <section className="welcome-section">
+    <section className="welcome-section" ref={scrollTargetRef}>
       <video id="welcome-background-video" muted={true} autoPlay loop>
         <source src={Video} type="video/webm" />
       </video>
+
       <div className="welcome-content-container">
-        <div className="welcome-menu-container">
-          {decorateDataWithPointsPositionOnCircle(NavbarData, 35, 50, 50).map((item, index) => {
-            return (
-              <Link key={index} activeClass="active" smooth={ScrollerProp.smooth} to={item.element} duration={ScrollerProp.duration}>
-                <button key={index} className="welcome-menu-btn" style={{width:"14vw", height: "6vh", left: `calc(${item.x}vw - 14vw / 2)`, top: `calc(${item.y}vh - 6vh / 2)`}}>
-                  {t(item.title).toUpperCase()}
-                </button>
-              </Link>
-            );
-          })}
-          {/* <div className="welcome-menu-top-container"> */}
-          {/* <div className="welcome-menu-element-container welcome-menu-element-btn-center-side">
-              <button>{t(Key.Reservation)}</button>
-            </div>
-            <div className="welcome-menu-element-container welcome-menu-element-btn-top-side welcome-menu-element-btn-right-side">
-              <button>{t(Key.Promotion)}</button>
-            </div>
+        {menuDisplayed && (
+          <div className="welcome-menu-container">
+            {decorateDataWithPointsPositionOnCircle(NavbarData, 35, 50, 50).map((item, index) => {
+              return (
+                <Link key={index} activeClass="active" smooth={ScrollerProp.smooth} to={item.element} duration={ScrollerProp.duration}>
+                  <button
+                    key={index}
+                    className="welcome-menu-btn"
+                    style={{
+                      width: menuBtnWidth,
+                      height: menuBtnHeight,
+                      left: `calc(${item.x}vw - ${menuBtnWidth} / 2)`,
+                      top: `calc(${item.y}vh - ${menuBtnHeight} / 2)`,
+                    }}
+                  >
+                    {t(item.title).toUpperCase()}
+                  </button>
+                </Link>
+              );
+            })}
           </div>
-          <div className="welcome-menu-bottom-container">
-            <div className="welcome-menu-element-container welcome-menu-element-btn-bottom-side welcome-menu-element-btn-left-side">
-              <button>{t(Key.Games)}</button>
-            </div>
-            <div className="welcome-menu-element-container welcome-menu-element-btn-center-side">
-              <button>{t(Key.Tournaments)}</button>
-            </div>
-            <div className="welcome-menu-element-container welcome-menu-element-btn-bottom-side welcome-menu-element-btn-right-side">
-              <button>{t(Key.Contact)}</button>
-            </div> */}
-          {/* </div> */}
-        </div>
+        )}
 
         <div className="welcome-baron-logo-conteiner">
           <button
             className="welcome-baron-logo"
-            onClick={() => scroller.scrollTo(ElementNames.aboutUs, { smooth: ScrollerProp.smooth, duration: ScrollerProp.duration })}
+            // onClick={() => scroller.scrollTo(ElementNames.aboutUs, { smooth: ScrollerProp.smooth, duration: ScrollerProp.duration })}
+            // onClick={() => setMenuDisplayed(!menuDisplayed)}
+            onClick={() => toggleMenu()}
             onMouseEnter={() => changeLogoHoveredState()}
             onMouseLeave={() => changeLogoHoveredState()}
           >
