@@ -15,6 +15,8 @@ export default function WelcomeV2() {
   const [logoHovered, setLogoHovered] = useState(false);
   const [menuDisplayed, setMenuDisplayed] = useState(false);
   const [menuButtonDisabled, setMenuButtonDisabled] = useState(true);
+  const [menuBackground, setMenuBackground] = useState("welcome-menu-background");
+
   const scrollTargetRef = useRef(null);
 
   function changeLogoHoveredState() {
@@ -58,8 +60,10 @@ export default function WelcomeV2() {
     if (menuDisplayed) {
       enableBodyScroll(scrollTargetRef);
       setMenuButtonDisabled(true);
+      setMenuBackground("welcome-menu-background-fade-out");
     } else {
       disableBodyScroll(scrollTargetRef);
+      setMenuBackground("welcome-menu-background-fade-in");
     }
   }
 
@@ -70,9 +74,9 @@ export default function WelcomeV2() {
       </video>
 
       <div className="welcome-content-container">
+        <div className={`welcome-menu-background ${menuDisplayed ? "welcome-menu-background-fade-in" : "welcome-menu-background-fade-out"}`} />
         {menuDisplayed && (
           <div className="welcome-menu-container">
-            <div className="welcome-menu-background" />
             <FadeIn delay={200} onComplete={() => setMenuButtonDisabled(false)}>
               {decorateDataWithPointsPositionOnCircle(NavbarData, 35, 50, 50).map((item, index) => {
                 return (
@@ -111,7 +115,7 @@ export default function WelcomeV2() {
             onMouseEnter={() => changeLogoHoveredState()}
             onMouseLeave={() => changeLogoHoveredState()}
           >
-            <div className={`welcome-baron-logo-triangle welcome-baron-logo-triangle-${menuDisplayed ? "clicked" : logoHovered ? "hovered" : ""}`} />
+            <div className={`welcome-baron-logo-triangle welcome-baron-logo-triangle-${menuDisplayed ? "clicked" : logoHovered && "hovered"}`} />
             <span className="welcome-baron-logo-name">
               BAR<span style={{ color: "black" }}>ON</span>
             </span>

@@ -1,3 +1,5 @@
+// FONT
+
 @font-face {
   font-family: "vcr_osd_monoregular";
   src: url("../../../assets/font/vcr_osd_mono_1.001-webfont.woff2") format("woff2"), url("../../../assets/font/vcr_osd_mono_1.001-webfont.woff") format("woff");
@@ -24,6 +26,7 @@
 }
 
 //LOGO
+
 $logo-vw-width: 2.73vw;
 
 .welcome-baron-logo-conteiner {
@@ -33,7 +36,6 @@ $logo-vw-width: 2.73vw;
   align-items: center;
   width: 100%;
   font-size: calc(55.64px + $logo-vw-width);
-  // z-index: 0;
 }
 
 .welcome-baron-logo {
@@ -52,15 +54,6 @@ $logo-vw-width: 2.73vw;
   color: whitesmoke;
 }
 
-// .welcome-baron-logo-triangle-hovered,
-// .welcome-baron-logo-triangle-not-hovered {
-//   z-index: -1;
-//   right: 0;
-//   position: absolute;
-//   border-style: solid;
-//   border-width: calc(50px + $logo-vw-width) 0 calc(50px + $logo-vw-width) calc(74px + $logo-vw-width);
-// }
-
 .welcome-baron-logo-triangle {
   z-index: -1;
   right: 0;
@@ -71,11 +64,8 @@ $logo-vw-width: 2.73vw;
 }
 
 .welcome-baron-logo-triangle-hovered {
-  // -webkit-filter: drop-shadow(0px 0px 20px rgb(10 94 10));
   border-color: transparent transparent transparent rgb(10 94 10 / 100%);
   filter: drop-shadow(0px 0px 20px rgb(10 94 10));
-  // border-color: transparent transparent transparent rgb(10 94 10 / 100%);
-  // -webkit-backface-visibility: hidden;
 }
 
 .welcome-baron-logo-triangle-clicked {
@@ -93,11 +83,10 @@ $logo-vw-width: 2.73vw;
 
 @keyframes poulsing {
   from {
-    filter: drop-shadow(0px 0px 10px rgba(10 94 10))  drop-shadow(0px 0px 30px rgba(10 94 10))
-
+    filter: drop-shadow(0px 0px 10px rgba(10 94 10)) drop-shadow(0px 0px 30px rgba(10 94 10));
   }
   to {
-    filter: drop-shadow(0px 0px 20px rgb(10 94 10)) drop-shadow(0px 0px 30px rgb(10 94 10))
+    filter: drop-shadow(0px 0px 20px rgb(10 94 10)) drop-shadow(0px 0px 30px rgb(10 94 10));
   }
 }
 
@@ -115,6 +104,11 @@ $logo-vw-width: 2.73vw;
 
 //WELCOME MENU
 
+$fade-duration: 0.5s;
+$menu-element-btn-top-btn-padding: 9vh;
+$welcome-menu-btn-width: 14vw;
+$welcome-menu-btn-height: 6vh;
+
 .welcome-menu-container {
   position: absolute;
   display: flex;
@@ -124,16 +118,19 @@ $logo-vw-width: 2.73vw;
 }
 
 .welcome-menu-background {
-  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
 
-$menu-element-btn-top-btn-padding: 9vh;
-$welcome-menu-btn-width: 14vw;
-$welcome-menu-btn-height: 6vh;
+.welcome-menu-background-fade-in {
+  animation: bcgfadein $fade-duration ease-out forwards;
+}
+
+.welcome-menu-background-fade-out {
+  animation: bcgfadeout $fade-duration ease-out forwards;
+}
 
 .welcome-menu-btn {
   color: whitesmoke;
@@ -167,4 +164,22 @@ $menu-element-btn-side-padding: 20vw;
 
 .welcome-menu-element-btn-right-side {
   padding-right: $menu-element-btn-side-padding;
+}
+
+@keyframes bcgfadein {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@keyframes bcgfadeout {
+  0% {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
