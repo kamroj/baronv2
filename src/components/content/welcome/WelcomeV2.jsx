@@ -9,13 +9,12 @@ import "./WelcomeV2.scss";
 
 export default function WelcomeV2() {
   const menuBtnWidth = "14vw";
-  const menuBtnHeight = "6vh";
+  const menuBtnHeight = "5vh";
 
   const { t } = useTranslation();
   const [logoHovered, setLogoHovered] = useState(false);
   const [menuDisplayed, setMenuDisplayed] = useState(false);
   const [menuButtonDisabled, setMenuButtonDisabled] = useState(true);
-  const [menuBackground, setMenuBackground] = useState("welcome-menu-background");
 
   const scrollTargetRef = useRef(null);
 
@@ -60,10 +59,8 @@ export default function WelcomeV2() {
     if (menuDisplayed) {
       enableBodyScroll(scrollTargetRef);
       setMenuButtonDisabled(true);
-      setMenuBackground("welcome-menu-background-fade-out");
     } else {
       disableBodyScroll(scrollTargetRef);
-      setMenuBackground("welcome-menu-background-fade-in");
     }
   }
 
@@ -91,7 +88,7 @@ export default function WelcomeV2() {
                     <button
                       key={index}
                       disabled={menuButtonDisabled}
-                      className="welcome-menu-btn"
+                      className={`welcome-menu-btn${menuButtonDisabled ? "" : "-hover"}`}
                       style={{
                         width: menuBtnWidth,
                         height: menuBtnHeight,
@@ -115,12 +112,12 @@ export default function WelcomeV2() {
             onMouseEnter={() => changeLogoHoveredState()}
             onMouseLeave={() => changeLogoHoveredState()}
           >
-            <div className={`welcome-baron-logo-triangle welcome-baron-logo-triangle-${menuDisplayed ? "clicked" : logoHovered && "hovered"}`} />
+            <div className={`welcome-baron-logo-triangle ${menuDisplayed ? "welcome-baron-logo-triangle-clicked" : logoHovered ? "welcome-baron-logo-triangle-hovered" : ""}`} />
             <span className="welcome-baron-logo-name">
               BAR<span style={{ color: "black" }}>ON</span>
             </span>
           </button>
-          <span className="welcome-baron-logo-desc">
+          <span className="welcome-baron-logo-desc" style={{'&:hover': {background: "red"}}}>
             {colorFirstLetter(t("logo_description_consols_key"))} {t("logo_description_and_key")} {colorFirstLetter(t("logo_description_board_games_key"))}
           </span>
         </div>

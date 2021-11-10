@@ -132,38 +132,20 @@ $welcome-menu-btn-height: 6vh;
   animation: bcgfadeout $fade-duration ease-out forwards;
 }
 
-.welcome-menu-btn {
+.welcome-menu-btn,
+.welcome-menu-btn-hover {
   color: whitesmoke;
   background-color: transparent;
   border: solid 1px;
   border-color: rgb(0, 144, 0);
   position: absolute;
   font-size: calc(2px + 1vw);
+  min-height: 40px;
 }
 
-.welcome-menu-element-btn-top-side {
-  justify-content: center;
-  align-items: end;
-}
-
-.welcome-menu-element-btn-bottom-side {
-  justify-content: center;
-  align-items: start;
-}
-
-.welcome-menu-element-btn-center-side {
-  justify-content: center;
-  align-items: center;
-}
-
-$menu-element-btn-side-padding: 20vw;
-
-.welcome-menu-element-btn-left-side {
-  padding-left: $menu-element-btn-side-padding;
-}
-
-.welcome-menu-element-btn-right-side {
-  padding-right: $menu-element-btn-side-padding;
+.welcome-menu-btn-hover:hover {
+  background-color: rgba(54, 109, 54, 0.25);
+  filter: drop-shadow(0px 0px 10px rgba(10 94 10)) drop-shadow(0px 0px 30px rgba(10 94 10));
 }
 
 @keyframes bcgfadein {
