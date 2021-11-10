@@ -33,7 +33,7 @@ $logo-vw-width: 2.73vw;
   align-items: center;
   width: 100%;
   font-size: calc(55.64px + $logo-vw-width);
-  z-index: 0;
+  // z-index: 0;
 }
 
 .welcome-baron-logo {
@@ -52,23 +52,35 @@ $logo-vw-width: 2.73vw;
   color: whitesmoke;
 }
 
-.welcome-baron-logo-triangle-hovered,
-.welcome-baron-logo-triangle-not-hovered {
+// .welcome-baron-logo-triangle-hovered,
+// .welcome-baron-logo-triangle-not-hovered {
+//   z-index: -1;
+//   right: 0;
+//   position: absolute;
+//   border-style: solid;
+//   border-width: calc(50px + $logo-vw-width) 0 calc(50px + $logo-vw-width) calc(74px + $logo-vw-width);
+// }
+
+.welcome-baron-logo-triangle {
   z-index: -1;
   right: 0;
   position: absolute;
   border-style: solid;
   border-width: calc(50px + $logo-vw-width) 0 calc(50px + $logo-vw-width) calc(74px + $logo-vw-width);
-}
-
-.welcome-baron-logo-triangle-not-hovered {
   border-color: transparent transparent transparent rgb(10 94 10 / 40%);
 }
 
 .welcome-baron-logo-triangle-hovered {
-  -webkit-filter: drop-shadow(0px 0px 20px rgb(10 94 10));
-  filter: drop-shadow(0px 0px 20px rgb(10 94 10));
+  // -webkit-filter: drop-shadow(0px 0px 20px rgb(10 94 10));
   border-color: transparent transparent transparent rgb(10 94 10 / 100%);
+  filter: drop-shadow(0px 0px 20px rgb(10 94 10));
+  // border-color: transparent transparent transparent rgb(10 94 10 / 100%);
+  // -webkit-backface-visibility: hidden;
+}
+
+.welcome-baron-logo-triangle-clicked {
+  border-color: transparent transparent transparent rgb(10 94 10 / 100%);
+  animation: poulsing 1.5s ease-in-out infinite alternate;
 }
 
 .welcome-baron-logo-desc {
@@ -77,6 +89,16 @@ $logo-vw-width: 2.73vw;
 
 .welcome-baron-logo-desc-letter-col {
   color: green;
+}
+
+@keyframes poulsing {
+  from {
+    filter: drop-shadow(0px 0px 10px rgba(10 94 10))  drop-shadow(0px 0px 30px rgba(10 94 10))
+
+  }
+  to {
+    filter: drop-shadow(0px 0px 20px rgb(10 94 10)) drop-shadow(0px 0px 30px rgb(10 94 10))
+  }
 }
 
 //BACKGROUND
@@ -91,8 +113,9 @@ $logo-vw-width: 2.73vw;
   object-position: center top;
 }
 
+//WELCOME MENU
+
 .welcome-menu-container {
-  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -100,28 +123,15 @@ $logo-vw-width: 2.73vw;
   height: 100%;
 }
 
-// .welcome-menu-top-container {
-//   display: flex;
-//   width: 100%;
-//   height: 100%;
-// }
-
-// .welcome-menu-bottom-container {
-//   display: flex;
-//   width: 100%;
-//   height: 100%;
-// }
+.welcome-menu-background {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
 $menu-element-btn-top-btn-padding: 9vh;
-
-// .welcome-menu-element-container {
-//   display: flex;
-//   width: 100%;
-//   height: 100%;
-//   padding-top: $menu-element-btn-top-btn-padding;
-//   padding-bottom: $menu-element-btn-top-btn-padding;
-// }
-
 $welcome-menu-btn-width: 14vw;
 $welcome-menu-btn-height: 6vh;
 
@@ -130,11 +140,7 @@ $welcome-menu-btn-height: 6vh;
   background-color: transparent;
   border: solid 1px;
   border-color: rgb(0, 144, 0);
-  // width: $welcome-menu-btn-width;
-  // height: $welcome-menu-btn-height;
   position: absolute;
-  // left: calc(85vw - $welcome-menu-btn-width / 2);
-  // top: calc(50vh - $welcome-menu-btn-height / 2);
   font-size: calc(2px + 1vw);
 }
 

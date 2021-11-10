@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Link, scroller } from "react-scroll";
 import Video from "../../../assets/video/beer.webm";
 import { ElementNames, NavbarData, ScrollerProp } from "../../navbar/NavbarData";
+import FadeIn from "react-fade-in";
 import "./WelcomeV2.scss";
 
 export default function WelcomeV2() {
@@ -13,7 +14,8 @@ export default function WelcomeV2() {
   const { t } = useTranslation();
   const [logoHovered, setLogoHovered] = useState(false);
   const [menuDisplayed, setMenuDisplayed] = useState(false);
-  const scrollTargetRef = useRef(null)
+  const [menuButtonDisabled, setMenuButtonDisabled] = useState(true);
+  const scrollTargetRef = useRef(null);
 
   function changeLogoHoveredState() {
     setLogoHovered(!logoHovered);
@@ -50,8 +52,15 @@ export default function WelcomeV2() {
   }
 
   function toggleMenu() {
-    setMenuDisplayed(!menuDisplayed)
-    menuDisplayed ? enableBodyScroll(scrollTargetRef) : disableBodyScroll(scrollTargetRef)
+    scroller.scrollTo(ElementNames.top, { smooth: "false", duration: 20 });
+    setMenuDisplayed(!menuDisplayed);
+
+    if (menuDisplayed) {
+      enableBodyScroll(scrollTargetRef);
+      setMenuButtonDisabled(true);
+    } else {
+      disableBodyScroll(scrollTargetRef);
+    }
   }
 
   return (
@@ -63,37 +72,46 @@ export default function WelcomeV2() {
       <div className="welcome-content-container">
         {menuDisplayed && (
           <div className="welcome-menu-container">
-            {decorateDataWithPointsPositionOnCircle(NavbarData, 35, 50, 50).map((item, index) => {
-              return (
-                <Link key={index} activeClass="active" smooth={ScrollerProp.smooth} to={item.element} duration={ScrollerProp.duration}>
-                  <button
+            <div className="welcome-menu-background" />
+            <FadeIn delay={200} onComplete={() => setMenuButtonDisabled(false)}>
+              {decorateDataWithPointsPositionOnCircle(NavbarData, 35, 50, 50).map((item, index) => {
+                return (
+                  <Link
                     key={index}
-                    className="welcome-menu-btn"
-                    style={{
-                      width: menuBtnWidth,
-                      height: menuBtnHeight,
-                      left: `calc(${item.x}vw - ${menuBtnWidth} / 2)`,
-                      top: `calc(${item.y}vh - ${menuBtnHeight} / 2)`,
-                    }}
+                    activeClass="active"
+                    smooth={ScrollerProp.smooth}
+                    to={item.element}
+                    duration={ScrollerProp.duration}
+                    onClick={() => toggleMenu()}
                   >
-                    {t(item.title).toUpperCase()}
-                  </button>
-                </Link>
-              );
-            })}
+                    <button
+                      key={index}
+                      disabled={menuButtonDisabled}
+                      className="welcome-menu-btn"
+                      style={{
+                        width: menuBtnWidth,
+                        height: menuBtnHeight,
+                        left: `calc(${item.x}vw - ${menuBtnWidth} / 2)`,
+                        top: `calc(${item.y}vh - ${menuBtnHeight} / 2)`,
+                      }}
+                    >
+                      {t(item.title).toUpperCase()}
+                    </button>
+                  </Link>
+                );
+              })}
+            </FadeIn>
           </div>
         )}
 
         <div className="welcome-baron-logo-conteiner">
           <button
             className="welcome-baron-logo"
-            // onClick={() => scroller.scrollTo(ElementNames.aboutUs, { smooth: ScrollerProp.smooth, duration: ScrollerProp.duration })}
-            // onClick={() => setMenuDisplayed(!menuDisplayed)}
             onClick={() => toggleMenu()}
             onMouseEnter={() => changeLogoHoveredState()}
             onMouseLeave={() => changeLogoHoveredState()}
           >
-            <div className={`welcome-baron-logo-triangle-${logoHovered ? "hovered" : "not-hovered"}`} />
+            <div className={`welcome-baron-logo-triangle welcome-baron-logo-triangle-${menuDisplayed ? "clicked" : logoHovered ? "hovered" : ""}`} />
             <span className="welcome-baron-logo-name">
               BAR<span style={{ color: "black" }}>ON</span>
             </span>
