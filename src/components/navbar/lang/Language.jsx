@@ -6,7 +6,7 @@ import "./Language.scss";
 
 import "flag-icon-css/css/flag-icons.min.css";
 
-export default function Language() {
+export default function Language({ style }) {
   const [flag, setFlag] = useState(undefined);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function Language() {
   }
 
   return (
-    <div className="dropdown">
+    <div className="language dropdown" style={style}>
       <button className="dropdown-lng-menu-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
         <span className={`flag-icon ${flag}`}></span>
       </button>

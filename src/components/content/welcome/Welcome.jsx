@@ -6,6 +6,7 @@ import Video from "../../../assets/video/beer.webm";
 import { ElementNames, NavbarData, ScrollerProp } from "../../navbar/NavbarData";
 import FadeIn from "react-fade-in";
 import "./Welcome.scss";
+import Language from "../../navbar/lang/Language";
 
 export default function WelcomeV2() {
   const menuBtnWidth = "14vw";
@@ -66,6 +67,8 @@ export default function WelcomeV2() {
 
   return (
     <section className="welcome-section" ref={scrollTargetRef}>
+      {!menuDisplayed && (<Language style={{ position: "absolute", right: "0.5vw", top: "1vh" }} />)}
+
       <video id="welcome-background-video" muted={true} autoPlay loop>
         <source src={Video} type="video/webm" />
       </video>
@@ -112,12 +115,16 @@ export default function WelcomeV2() {
             onMouseEnter={() => changeLogoHoveredState()}
             onMouseLeave={() => changeLogoHoveredState()}
           >
-            <div className={`welcome-baron-logo-triangle ${menuDisplayed ? "welcome-baron-logo-triangle-clicked" : logoHovered ? "welcome-baron-logo-triangle-hovered" : ""}`} />
+            <div
+              className={`welcome-baron-logo-triangle ${
+                menuDisplayed ? "welcome-baron-logo-triangle-clicked" : logoHovered ? "welcome-baron-logo-triangle-hovered" : ""
+              }`}
+            />
             <span className="welcome-baron-logo-name">
               BAR<span style={{ color: "black" }}>ON</span>
             </span>
           </button>
-          <span className="welcome-baron-logo-desc" style={{'&:hover': {background: "red"}}}>
+          <span className="welcome-baron-logo-desc" style={{ "&:hover": { background: "red" } }}>
             {colorFirstLetter(t("logo_description_consols_key"))} {t("logo_description_and_key")} {colorFirstLetter(t("logo_description_board_games_key"))}
           </span>
         </div>
