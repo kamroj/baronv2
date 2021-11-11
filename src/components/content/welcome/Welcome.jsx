@@ -24,10 +24,6 @@ export default function Welcome() {
 
   const isMobile = () => windowWidth < mobileWidth;
 
-  function changeLogoHoveredState() {
-    setLogoHovered(!logoHovered);
-  }
-
   function colorFirstLetter(txt) {
     return (
       <span>
@@ -65,6 +61,7 @@ export default function Welcome() {
     if (menuDisplayed) {
       enableBodyScroll(scrollTargetRef);
       setMenuButtonDisabled(true);
+      setLogoHovered(false);
     } else {
       disableBodyScroll(scrollTargetRef);
     }
@@ -119,8 +116,8 @@ export default function Welcome() {
             <button
               className="welcome-baron-logo"
               onClick={() => toggleMenu()}
-              onMouseEnter={() => changeLogoHoveredState()}
-              onMouseLeave={() => changeLogoHoveredState()}
+              onMouseEnter={() => setLogoHovered(true)}
+              onMouseLeave={() => setLogoHovered(false)}
             >
               <div
                 className={`welcome-baron-logo-triangle ${
