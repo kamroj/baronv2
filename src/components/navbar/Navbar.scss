@@ -1,6 +1,14 @@
 $min-nav-height: 5vh;
 $edge-items-margin: 20px;
-$background-color: #121111e0;
+$background-color: #1211118c;
+
+.navbar-container-ref-wrapper {
+  top: 0;
+  z-index: 1;
+  height: $min-nav-height;
+  width: 100%;
+  position: sticky;
+}
 
 .navbar-container {
   color: #c2c2c2;
@@ -9,11 +17,7 @@ $background-color: #121111e0;
   position: sticky;
   justify-content: center;
   align-items: center;
-  height: auto;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  height: $min-nav-height;
+  height: 100%;
   width: 100%;
 }
 

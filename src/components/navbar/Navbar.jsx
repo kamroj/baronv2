@@ -7,12 +7,14 @@ import { ElementNames, NavbarData, ScrollerProp } from "./NavbarData";
 import logo from "../../assets/images/logo.png";
 import Language from "./lang/Language";
 import { Link, scroller } from "react-scroll";
+import { useRect } from "../../hooks/useRectHook";
 
 export default function Menu() {
   const { t } = useTranslation();
 
   const [toggleMenu, setToggleMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [rect, ref] = useRect();
 
   const navbarRef = useRef(null);
   const toggleNav = () => setToggleMenu(!toggleMenu);
@@ -28,33 +30,36 @@ export default function Menu() {
   }, []);
 
   return (
-    <div className="navbar-container" ref={navbarRef}>
-      <div className="navbar-items-container">
-        <button
-          className="navbar-logo-btn"
-          onClick={() => scroller.scrollTo(ElementNames.top, { smooth: ScrollerProp.smooth, duration: ScrollerProp.duration })}
-        >
-          <img src={logo} alt="logo" className="navbar-logo" />
-        </button>
-        <button onClick={toggleNav} className="navbar-btn">
-          <AiOutlineMenu size={30} color={"rgb(0, 144, 0)"} />
-        </button>
+    <div className="navbar-container-ref-wrapper" ref={ref}>
+      {rect.y <= 0 && (<div className="navbar-container" ref={navbarRef}>
+        <div className="navbar-items-container">
+          <button
+            className="navbar-logo-btn"
+            onClick={() => scroller.scrollTo(ElementNames.top, { smooth: ScrollerProp.smooth, duration: ScrollerProp.duration })}
+          >
+            <img src={logo} alt="logo" className="navbar-logo" />
+          </button>
+          <button onClick={toggleNav} className="navbar-btn">
+            <AiOutlineMenu size={30} color={"rgb(0, 144, 0)"} />
+          </button>
+        </div>
+        {(toggleMenu || screenWidth > 900) && (
+          <>
+            <ul className="navbar-list-container">
+              {NavbarData.map((item, index) => {
+                return (
+                  <Link key={index} activeClass="active" smooth={ScrollerProp.smooth} to={item.element} duration={ScrollerProp.duration}>
+                    <li key={index} onClick={toggleNav}>
+                      <span>{t(item.title).toUpperCase()}</span>
+                    </li>
+                  </Link>
+                );
+              })}
+              <Language />
+            </ul>
+          </>
+        )}
       </div>
-      {(toggleMenu || screenWidth > 900) && (
-        <>
-          <ul className="navbar-list-container">
-            {NavbarData.map((item, index) => {
-              return (
-                <Link key={index} activeClass="active" smooth={ScrollerProp.smooth} to={item.element} duration={ScrollerProp.duration}>
-                  <li key={index} onClick={toggleNav}>
-                    <span>{t(item.title).toUpperCase()}</span>
-                  </li>
-                </Link>
-              );
-            })}
-            <Language />
-          </ul>
-        </>
       )}
     </div>
   );
