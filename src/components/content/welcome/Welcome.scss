@@ -117,6 +117,8 @@ $welcome-menu-btn-height: 6vh;
   height: 100%;
 }
 
+
+
 .welcome-menu-background {
   position: absolute;
   width: 100%;
@@ -139,7 +141,7 @@ $welcome-menu-btn-height: 6vh;
   border: solid 1px;
   border-color: rgb(0, 144, 0);
   position: absolute;
-  font-size: calc(2px + 1vw);
+  font-size: calc(4px + 1vw);
   min-height: 40px;
 }
 
@@ -163,5 +165,21 @@ $welcome-menu-btn-height: 6vh;
   }
   100% {
     background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .welcome-menu-btn,
+  .welcome-menu-btn-hover {
+    font-size: calc(3vw);
+  }
+
+  .welcome-menu-container > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
   }
 }

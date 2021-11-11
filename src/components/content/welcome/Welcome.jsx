@@ -7,17 +7,22 @@ import { ElementNames, NavbarData, ScrollerProp } from "../../navbar/NavbarData"
 import FadeIn from "react-fade-in";
 import "./Welcome.scss";
 import Language from "../../navbar/lang/Language";
+import useWindowDimensions from "../../../hooks/useWindowDimensionsHook";
 
-export default function WelcomeV2() {
+export default function Welcome() {
   const menuBtnWidth = "14vw";
   const menuBtnHeight = "5vh";
+  const mobileWidth = 650;
 
   const { t } = useTranslation();
   const [logoHovered, setLogoHovered] = useState(false);
   const [menuDisplayed, setMenuDisplayed] = useState(false);
   const [menuButtonDisabled, setMenuButtonDisabled] = useState(true);
+  const { windowWidth } = useWindowDimensions();
 
   const scrollTargetRef = useRef(null);
+
+  const isMobile = () => windowWidth < mobileWidth;
 
   function changeLogoHoveredState() {
     setLogoHovered(!logoHovered);
@@ -65,9 +70,35 @@ export default function WelcomeV2() {
     }
   }
 
+  function generateButtons(isMobile) {
+    let btnData = isMobile ? NavbarData : decorateDataWithPointsPositionOnCircle(NavbarData, 35, 50, 50);
+
+    return btnData.map((item, index) => {
+      let btnStyle = isMobile
+        ? {
+            width: "50vw",
+            height: "100%",
+            position: "static",
+          }
+        : {
+            width: menuBtnWidth,
+            height: menuBtnHeight,
+            left: `calc(${item.x}vw - ${menuBtnWidth} / 2)`,
+            top: `calc(${item.y}vh - ${menuBtnHeight} / 2)`,
+          };
+      return (
+        <Link key={index} activeClass="active" smooth={ScrollerProp.smooth} to={item.element} duration={ScrollerProp.duration} onClick={() => toggleMenu()}>
+          <button key={index} disabled={menuButtonDisabled} className={`welcome-menu-btn${menuButtonDisabled ? "" : "-hover"}`} style={btnStyle}>
+            {t(item.title).toUpperCase()}
+          </button>
+        </Link>
+      );
+    });
+  }
+
   return (
     <section className="welcome-section" ref={scrollTargetRef}>
-      {!menuDisplayed && (<Language style={{ position: "absolute", right: "0.5vw", top: "1vh" }} />)}
+      {!menuDisplayed && <Language style={{ position: "absolute", right: "0.5vw", top: "1vh" }} />}
 
       <video id="welcome-background-video" muted={true} autoPlay loop>
         <source src={Video} type="video/webm" />
@@ -78,56 +109,33 @@ export default function WelcomeV2() {
         {menuDisplayed && (
           <div className="welcome-menu-container">
             <FadeIn delay={200} onComplete={() => setMenuButtonDisabled(false)}>
-              {decorateDataWithPointsPositionOnCircle(NavbarData, 35, 50, 50).map((item, index) => {
-                return (
-                  <Link
-                    key={index}
-                    activeClass="active"
-                    smooth={ScrollerProp.smooth}
-                    to={item.element}
-                    duration={ScrollerProp.duration}
-                    onClick={() => toggleMenu()}
-                  >
-                    <button
-                      key={index}
-                      disabled={menuButtonDisabled}
-                      className={`welcome-menu-btn${menuButtonDisabled ? "" : "-hover"}`}
-                      style={{
-                        width: menuBtnWidth,
-                        height: menuBtnHeight,
-                        left: `calc(${item.x}vw - ${menuBtnWidth} / 2)`,
-                        top: `calc(${item.y}vh - ${menuBtnHeight} / 2)`,
-                      }}
-                    >
-                      {t(item.title).toUpperCase()}
-                    </button>
-                  </Link>
-                );
-              })}
+              {generateButtons(isMobile())}
             </FadeIn>
           </div>
         )}
 
-        <div className="welcome-baron-logo-conteiner">
-          <button
-            className="welcome-baron-logo"
-            onClick={() => toggleMenu()}
-            onMouseEnter={() => changeLogoHoveredState()}
-            onMouseLeave={() => changeLogoHoveredState()}
-          >
-            <div
-              className={`welcome-baron-logo-triangle ${
-                menuDisplayed ? "welcome-baron-logo-triangle-clicked" : logoHovered ? "welcome-baron-logo-triangle-hovered" : ""
-              }`}
-            />
-            <span className="welcome-baron-logo-name">
-              BAR<span style={{ color: "black" }}>ON</span>
+        {(!menuDisplayed || (menuDisplayed && !isMobile())) && (
+          <div className="welcome-baron-logo-conteiner">
+            <button
+              className="welcome-baron-logo"
+              onClick={() => toggleMenu()}
+              onMouseEnter={() => changeLogoHoveredState()}
+              onMouseLeave={() => changeLogoHoveredState()}
+            >
+              <div
+                className={`welcome-baron-logo-triangle ${
+                  menuDisplayed ? "welcome-baron-logo-triangle-clicked" : logoHovered ? "welcome-baron-logo-triangle-hovered" : ""
+                }`}
+              />
+              <span className="welcome-baron-logo-name">
+                BAR<span style={{ color: "black" }}>ON</span>
+              </span>
+            </button>
+            <span className="welcome-baron-logo-desc" style={{ "&:hover": { background: "red" } }}>
+              {colorFirstLetter(t("logo_description_consols_key"))} {t("logo_description_and_key")} {colorFirstLetter(t("logo_description_board_games_key"))}
             </span>
-          </button>
-          <span className="welcome-baron-logo-desc" style={{ "&:hover": { background: "red" } }}>
-            {colorFirstLetter(t("logo_description_consols_key"))} {t("logo_description_and_key")} {colorFirstLetter(t("logo_description_board_games_key"))}
-          </span>
-        </div>
+          </div>
+        )}
       </div>
     </section>
   );
