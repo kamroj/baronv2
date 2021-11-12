@@ -1,4 +1,4 @@
-$min-nav-height: 5vh;
+$min-nav-height: 50px;
 $edge-items-margin: 20px;
 $background-color: #1211118c;
 
@@ -70,7 +70,8 @@ $background-color: #1211118c;
   }
 
   .navbar-list-container {
-    background-color: $background-color;
+    background-color: #1211118c;
+    backdrop-filter: blur(10px);
     display: flex;
     position: absolute;
     top: 100%;
@@ -83,12 +84,11 @@ $background-color: #1211118c;
     width: 100%;
   }
 
-  .navbar-list-container > li {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .navbar-list-container > a {
+    padding-top: 5px;
+    padding-bottom: 5px;
     display: flex;
     justify-content: center;
-    border-top: 1px solid #00900062;
     width: 100%;
   }
 
