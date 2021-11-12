@@ -11,7 +11,7 @@ import useWindowDimensions from "../../../hooks/useWindowDimensionsHook";
 
 export default function Welcome() {
   const menuBtnWidth = "14vw";
-  const menuBtnHeight = "5vh";
+  const menuBtnHeight = "6vh";
   const mobileWidth = 650;
 
   const { t } = useTranslation();
@@ -40,10 +40,10 @@ export default function Welcome() {
     return { x: x, y: y };
   }
 
-  function decorateDataWithPointsPositionOnCircle(data, radius, cx, cy) {
+  function decorateDataWithPointsPositionOnCircle(data, radius, cx, cy, startingAngle = 180) {
     let decoratedData = [];
     let angleIncremental = 360 / data.length;
-    let angle = 0;
+    let angle = startingAngle;
 
     for (let i = 0; i < data.length; i++) {
       let point = calculatePointOnCircle(radius, angle, cx, cy);
@@ -68,7 +68,7 @@ export default function Welcome() {
   }
 
   function generateButtons(isMobile) {
-    let btnData = isMobile ? NavbarData : decorateDataWithPointsPositionOnCircle(NavbarData, 35, 50, 50);
+    let btnData = isMobile ? NavbarData : decorateDataWithPointsPositionOnCircle(NavbarData, 35, 50, 50, 200);
 
     return btnData.map((item, index) => {
       let btnStyle = isMobile
