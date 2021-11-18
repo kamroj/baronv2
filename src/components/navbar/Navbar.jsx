@@ -35,7 +35,7 @@ export default function Menu() {
         <div className="navbar-items-container">
           <button
             className="navbar-logo-btn"
-            onClick={() => scroller.scrollTo(ElementNames.top, { smooth: ScrollerProp.smooth, duration: ScrollerProp.duration })}
+            onClick={() => scroller.scrollTo(ElementNames.top, ScrollerProp)}
           >
             <img src={logo} alt="logo" className="navbar-logo" />
           </button>
@@ -48,7 +48,7 @@ export default function Menu() {
             <ul className="navbar-list-container">
               {NavbarData.map((item, index) => {
                 return (
-                  <Link key={index} activeClass="active" smooth={ScrollerProp.smooth} to={item.element} duration={ScrollerProp.duration}>
+                  <Link key={index} activeClass="active" smooth={ScrollerProp.smooth} to={item.element} duration={ScrollerProp.duration} offset={ScrollerProp.offset}>
                     <li key={index} onClick={toggleNav}>
                       <span>{t(item.title).toUpperCase()}</span>
                     </li>

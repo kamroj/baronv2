@@ -11,7 +11,8 @@ export const ElementNames = {
 
 export const ScrollerProp = {
   "smooth": true,
-  "duration": 500
+  "duration": 500,
+  "offset":-50
 }
 
 export const NavbarData = [

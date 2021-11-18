@@ -14,7 +14,6 @@ function App() {
       <div>
         <Navbar />
         <AboutUs />
-        <AboutUs />
       </div>
     </div>
   );

@@ -1,13 +1,13 @@
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import React, { useRef, useState } from "react";
+import FadeIn from "react-fade-in";
 import { useTranslation } from "react-i18next";
 import { Link, scroller } from "react-scroll";
 import Video from "../../../assets/video/beer.webm";
-import { ElementNames, NavbarData, ScrollerProp } from "../../navbar/NavbarData";
-import FadeIn from "react-fade-in";
-import "./Welcome.scss";
-import Language from "../../navbar/lang/Language";
 import useWindowDimensions from "../../../hooks/useWindowDimensionsHook";
+import Language from "../../navbar/lang/Language";
+import { ElementNames, NavbarData, ScrollerProp } from "../../navbar/NavbarData";
+import "./Welcome.scss";
 
 export default function Welcome() {
   const menuBtnWidth = "14vw";
@@ -84,7 +84,15 @@ export default function Welcome() {
             top: `calc(${item.y}vh - ${menuBtnHeight} / 2)`,
           };
       return (
-        <Link key={index} activeClass="active" smooth={ScrollerProp.smooth} to={item.element} duration={ScrollerProp.duration} onClick={() => toggleMenu()}>
+        <Link
+          key={index}
+          activeClass="active"
+          smooth={ScrollerProp.smooth}
+          to={item.element}
+          duration={ScrollerProp.duration}
+          offset={ScrollerProp.offset}
+          onClick={() => toggleMenu()}
+        >
           <button key={index} disabled={menuButtonDisabled} className={`welcome-menu-btn${menuButtonDisabled ? "" : "-hover"}`} style={btnStyle}>
             {t(item.title).toUpperCase()}
           </button>
