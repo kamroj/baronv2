@@ -11,5 +11,8 @@
   "__LOGO": "LOGO",
   "logo_description_consols_key": "CONSOLES",
   "logo_description_and_key": "AND",
-  "logo_description_board_games_key": "BOARD GAMES"
+  "logo_description_board_games_key": "BOARD GAMES",
+
+  "__ABOUTUS": "ABOUTUS",
+  "aboutus_header_desc_key": "About us..."
 }
