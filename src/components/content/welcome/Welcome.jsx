@@ -1,7 +1,7 @@
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import React, { useRef, useState } from "react";
 import FadeIn from "react-fade-in";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Link, scroller } from "react-scroll";
 import Video from "../../../assets/video/beer.webm";
 import useWindowDimensions from "../../../hooks/useWindowDimensionsHook";
@@ -23,15 +23,6 @@ export default function Welcome() {
   const scrollTargetRef = useRef(null);
 
   const isMobile = () => windowWidth < mobileWidth;
-
-  function colorFirstLetter(txt) {
-    return (
-      <span>
-        <span className="welcome-baron-logo-desc-letter-col">{txt[0]}</span>
-        {txt.substring(1)}
-      </span>
-    );
-  }
 
   function calculatePointOnCircle(radius, angle, cx, cy) {
     angle *= Math.PI / 180;
@@ -113,7 +104,7 @@ export default function Welcome() {
         <div className={`welcome-menu-background ${menuDisplayed ? "welcome-menu-background-fade-in" : "welcome-menu-background-fade-out"}`} />
         {menuDisplayed && (
           <div className="welcome-menu-container">
-            <FadeIn delay={200} onComplete={() => setMenuButtonDisabled(false)}>
+            <FadeIn delay={100} onComplete={() => setMenuButtonDisabled(false)}>
               {generateButtons(isMobile())}
             </FadeIn>
           </div>
@@ -137,7 +128,7 @@ export default function Welcome() {
               </span>
             </button>
             <span className="welcome-baron-logo-desc" style={{ "&:hover": { background: "red" } }}>
-              {colorFirstLetter(t("logo_description_consols_key"))} {t("logo_description_and_key")} {colorFirstLetter(t("logo_description_board_games_key"))}
+              <Trans i18nKey="logo_description_key" components={{ span: <span className="welcome-baron-logo-desc-letter-col" /> }} />
             </span>
           </div>
         )}
