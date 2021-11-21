@@ -94,7 +94,7 @@ export default function Welcome() {
 
   return (
     <section className="welcome-section" ref={scrollTargetRef}>
-      {!menuDisplayed && <Language style={{ position: "absolute", right: "0.5vw", top: "1vh" }} />}
+      {!menuDisplayed && <Language mainDivStyle={{ position: "absolute", right: "0.5vw", top: "1vh" }} />}
 
       <video id="welcome-background-video" muted={true} autoPlay loop>
         <source src={Video} type="video/webm" />

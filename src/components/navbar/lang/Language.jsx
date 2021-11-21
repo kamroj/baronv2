@@ -6,7 +6,7 @@ import "./Language.scss";
 
 import "flag-icon-css/css/flag-icons.min.css";
 
-export default function Language({ style }) {
+export default function Language({ mainDivStyle, dropDownStyle }) {
   const [flag, setFlag] = useState(undefined);
 
   useEffect(() => {
@@ -19,11 +19,11 @@ export default function Language({ style }) {
   }
 
   return (
-    <div className="language dropdown" style={style}>
+    <div className="language dropdown" style={mainDivStyle}>
       <button className="dropdown-lng-menu-btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
         <span className={`flag-icon ${flag}`}></span>
       </button>
-      <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <ul className="dropdown-menu" style={dropDownStyle} aria-labelledby="dropdownMenuButton1">
         {LanguageData.map(({ code, name }) => (
           <li key={code}>
             <button className="dropdown-item" onClick={() => changeLang(code)}>

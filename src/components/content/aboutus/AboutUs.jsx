@@ -18,7 +18,7 @@ export default function AboutUs() {
 
 
   const renderAboutUsAnim = () => (
-    <ReactTypingEffect text={t("aboutus_header_key")} className="about-us-header-text" eraseDelay={360000} cursorClassName="aboutus-header-cursor" />
+    <ReactTypingEffect text={t("aboutus_header_key")} className="aboutus-header-text" typingDelay={1000} eraseDelay={360000} cursorClassName="aboutus-header-cursor" />
   );
 
   function hasLanguageChanged(lg) {

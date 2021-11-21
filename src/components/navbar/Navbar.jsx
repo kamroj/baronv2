@@ -27,6 +27,8 @@ export default function Menu() {
     };
 
     window.addEventListener("resize", changeWidth);
+
+    return () => window.removeEventListener("resize", changeWidth);
   }, []);
 
   return (
@@ -55,7 +57,7 @@ export default function Menu() {
                   </Link>
                 );
               })}
-              <Language />
+              <Language dropDownStyle={{backgroundColor: "black"}}/>
             </ul>
           </>
         )}
