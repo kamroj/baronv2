@@ -11,7 +11,7 @@ import "./Welcome.scss";
 
 export default function Welcome() {
   const menuBtnWidth = "14vw";
-  const menuBtnHeight = "6vh";
+  const menuBtnHeight = "5vh";
   const mobileWidth = 650;
 
   const { t } = useTranslation();

@@ -16,6 +16,7 @@ export default function AboutUs() {
   const [languageChangedStateHack, setLanguageChanged] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState(i18next.language);
 
+
   const renderAboutUsAnim = () => (
     <ReactTypingEffect text={t("aboutus_header_key")} className="about-us-header-text" eraseDelay={360000} cursorClassName="aboutus-header-cursor" />
   );
@@ -71,8 +72,7 @@ export default function AboutUs() {
               </span>
             </div>
           </div>
-          <div className="aboutus-line-separator" style={{ height: "30rem" }} />
-          <div className="aboutus-line-separator" style={{ height: "25rem" }} />
+          {animationTriggered && (<div className="aboutus-line-separator"  />)}
           <div className="aboutus-description-container">
             <Trans i18nKey="aboutus_desc_key" components={{ span: <span style={{ color: "rgb(0, 144, 0)" }} /> }} />
           </div>
