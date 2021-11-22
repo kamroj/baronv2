@@ -5,6 +5,7 @@ import "./App.scss";
 import AboutUs from "./components/content/aboutus/AboutUs";
 import { Element } from "react-scroll";
 import Welcome from "./components/content/welcome/Welcome";
+import Gallery from "./components/content/gallery/Gallery";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <div>
         <Navbar />
         <AboutUs />
+        <Gallery />
       </div>
     </div>
   );

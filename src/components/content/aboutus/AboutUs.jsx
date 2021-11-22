@@ -9,6 +9,7 @@ import "./AboutUs.scss";
 import dimension from "../../../assets/images/dimension.png";
 import gameConsole from "../../../assets/images/console.png";
 import boardgame from "../../../assets/images/boardgame.png";
+import { ElementNames } from "../../navbar/NavbarData";
 
 export default function AboutUs() {
   const { t } = useTranslation();
@@ -35,7 +36,7 @@ export default function AboutUs() {
   }
 
   return (
-    <Element name="aboutus-element">
+    <Element name={ElementNames.aboutUs}>
       <section className="aboutus-section">
         <div className="aboutus-header">
           <InView
@@ -72,7 +73,7 @@ export default function AboutUs() {
               </span>
             </div>
           </div>
-          {animationTriggered && (<div className="aboutus-line-separator"  />)}
+          {/* {animationTriggered && (<div className="aboutus-line-separator"  />)} */}
           <div className="aboutus-description-container">
             <Trans i18nKey="aboutus_desc_key" components={{ span: <span style={{ color: "rgb(0, 144, 0)" }} /> }} />
           </div>
