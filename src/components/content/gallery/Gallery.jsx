@@ -5,13 +5,15 @@ import { ElementNames } from "../../navbar/NavbarData";
 
 import "./Gallery.scss";
 import { BaronImageUrls } from "./ImgUlrs";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function Gallery() {
+  
   return (
     <Element name={ElementNames.gallery}>
       <div className="gallery-container">
         <div className="gallery-header-container">
-          <span>Nigdy u nas nie byłeś?<br />Zobacz galerię zdjęć jak wygląda BarON w środku!</span>
+          <Trans i18nKey="gallery_header_key" components={{ baron: <span style={{ color: "rgb(0, 144, 0)" }} /> }} />
         </div>
         <div className="gallery-container-outer-lines">
           <div className="gallery-image-gallery">

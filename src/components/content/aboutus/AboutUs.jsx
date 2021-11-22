@@ -73,7 +73,6 @@ export default function AboutUs() {
               </span>
             </div>
           </div>
-          {/* {animationTriggered && (<div className="aboutus-line-separator"  />)} */}
           <div className="aboutus-description-container">
             <Trans i18nKey="aboutus_desc_key" components={{ span: <span style={{ color: "rgb(0, 144, 0)" }} /> }} />
           </div>

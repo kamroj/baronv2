@@ -8,24 +8,24 @@
 }
 
 .gallery-header-container {
-  background-color: #0327013d;
+  align-items: center;
+  background-color: #03270175;
   color: whitesmoke;
+  display: flex;
   font-size: 30px;
   font-weight: 100;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   padding: 40px 0;
+  text-align: center;
   width: 100%;
 }
 
 .gallery-container-outer-lines {
   border: 1px solid;
   border-color: #009000a1;
-  width: 90%;
-  padding: 20px;
   margin-top: 20px;
+  padding: 20px;
+  width: 90%;
 }
 
 .image-gallery-right-nav:hover,
