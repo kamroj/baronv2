@@ -31,7 +31,7 @@ export default function AboutUs() {
   }
 
   function countWrapper(endCount, suffix = "&nbsp;", duration = 3, delay = 1) {
-    return animationTriggered && <CountUp end={endCount} className="about-us-countup" delay={delay} duration={duration} suffix={suffix} />;
+    return animationTriggered && <CountUp end={endCount} className="aboutus-countup" delay={delay} duration={duration} suffix={suffix} />;
   }
 
   return (
