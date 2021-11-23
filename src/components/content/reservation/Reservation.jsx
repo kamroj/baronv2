@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { Trans } from "react-i18next";
+import { Element } from "react-scroll";
+import { ElementNames } from "../../navbar/NavbarData";
+
+import "./Reservation.scss";
 
 export default function Reservation() {
+  useTranslation();
+
   return (
-    <div>
-      
-    </div>
-  )
+    <Element name={ElementNames.reservation}>
+      <div className="reservation-container">
+        <Trans i18nKey="reservation-desc-key" components={{ green: <span style={{ color: "rgb(0, 144, 0)" }} /> }} />
+      </div>
+    </Element>
+  );
 }
