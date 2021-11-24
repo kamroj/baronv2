@@ -8,7 +8,7 @@ export default function Card({ frontCoverDesc, backCoverHeader, backCoverDisc, b
 
   return (
     <div>
-      <ReactCardFlip isFlipped={flipped}>
+      <ReactCardFlip isFlipped={flipped} >
         <button onClick={() => setFlipped(true)} className="card-front-cover">
           <div className="card-front-container">
             <span>{frontCoverDesc}</span>
@@ -17,7 +17,7 @@ export default function Card({ frontCoverDesc, backCoverHeader, backCoverDisc, b
 
         <button className="card-back-cover">
           <div className="card-back-cover-background-image" style={{ backgroundImage: `url(${backCoverImage})` }} />
-          <div className="card-back-container">
+          <div className={`card-back-container ${flipped ? "card-front-cover-clicked" : ""}`}>
             <span className="card-back-header">{backCoverHeader}</span>
             <span className="card-back-discount">{backCoverDisc}</span>
           </div>
