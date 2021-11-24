@@ -7,19 +7,6 @@ export default function Card({ frontCoverDesc, backCoverHeader, backCoverDisc, b
   const [flipped, setFlipped] = useState(false);
 
   return (
-    // <div>
-    //   <ReactCardFlip isFlipped={flipped}>
-    //     <button onClick={() => setFlipped(true)} className="card-front-cover">
-    //       {children[0]}
-    //     </button>
-
-    //     <button onClick={() => setFlipped(false)} className="card-back-cover">
-    //       <div className="card-back-cover-background-image" style={{ backgroundImage: `url(${backCoverImage})` }} />
-    //       {children[1]}
-    //     </button>
-    //   </ReactCardFlip>
-    // </div>
-
     <div>
       <ReactCardFlip isFlipped={flipped}>
         <button onClick={() => setFlipped(true)} className="card-front-cover">
@@ -28,7 +15,7 @@ export default function Card({ frontCoverDesc, backCoverHeader, backCoverDisc, b
           </div>
         </button>
 
-        <button onClick={() => setFlipped(false)} className="card-back-cover">
+        <button className="card-back-cover">
           <div className="card-back-cover-background-image" style={{ backgroundImage: `url(${backCoverImage})` }} />
           <div className="card-back-container">
             <span className="card-back-header">{backCoverHeader}</span>
