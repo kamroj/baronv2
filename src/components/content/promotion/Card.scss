@@ -1,0 +1,65 @@
+@import url("http://fonts.cdnfonts.com/css/apocalypse");
+
+.react-card-flip {
+  margin: 20px;
+}
+
+.card-front-container {
+  font-family: "Apocalypse", sans-serif;
+  color: whitesmoke;
+  font-size: 120px;
+}
+
+.card-back-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  color: whitesmoke;
+}
+
+.card-back-header,
+.card-back-discount {
+  background-color: rgba(0, 0, 0, 0.842);
+  padding: 10px 0;
+}
+
+.card-back-header {
+  color: whitesmoke;
+}
+
+.card-back-discount {
+  color: whitesmoke;
+}
+
+.card-front-cover,
+.card-back-cover  {
+  height: 300px;
+  width: 150px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 0;
+}
+
+.card-front-cover{
+  border-color: green;
+}
+
+.card-back-cover {
+  border-color: red;
+}
+
+.card-back-cover-background-image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: -1;
+  filter: brightness(0.5);
+}

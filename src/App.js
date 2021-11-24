@@ -6,8 +6,8 @@ import AboutUs from "./components/content/aboutus/AboutUs";
 import { Element } from "react-scroll";
 import Welcome from "./components/content/welcome/Welcome";
 import Gallery from "./components/content/gallery/Gallery";
-import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCustomerChat';
 import Reservation from "./components/content/reservation/Reservation";
+import Promotion from "./components/content/promotion/Promotion";
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
         <AboutUs />
         <Gallery />
         <Reservation />
+        <Promotion />
       </div>
       {/* <MessengerCustomerChat pageId="229571084064511" appId="1520264291685156" /> */}
     </div>

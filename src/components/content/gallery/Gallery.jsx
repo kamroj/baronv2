@@ -18,7 +18,7 @@ export default function Gallery() {
           </div>
         <div className="gallery-container-outer-lines">
           <div className="gallery-image-gallery">
-            <ReactImageGallery autoPlay={true} slideInterval={5000} items={BaronImageUrls} />
+            <ReactImageGallery autoPlay={false} slideInterval={5000} items={BaronImageUrls} />
           </div>
         </div>
       </div>

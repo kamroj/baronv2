@@ -12,7 +12,7 @@ export default function Reservation() {
   return (
     <Element name={ElementNames.reservation}>
       <div className="reservation-container">
-        <Trans i18nKey="reservation-desc-key" components={{ green: <span style={{ color: "rgb(0, 144, 0)" }} /> }} />
+        <Trans i18nKey="reservation-desc-key" components={{ green: <span style={{ color: "rgb(0, 144, 0)", whiteSpace:"nowrap" }} /> }} />
       </div>
     </Element>
   );
