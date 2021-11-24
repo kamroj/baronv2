@@ -57,7 +57,7 @@ export default function Menu() {
                   </Link>
                 );
               })}
-              <Language dropDownStyle={{backgroundColor: "black"}}/>
+              <Language onClick={toggleNav} dropDownStyle={{backgroundColor: "black"}}/>
             </ul>
           </>
         )}

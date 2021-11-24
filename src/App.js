@@ -21,6 +21,7 @@ function App() {
         <Gallery />
         <Reservation />
         <Promotion />
+        <Reservation />
       </div>
       {/* <MessengerCustomerChat pageId="229571084064511" appId="1520264291685156" /> */}
     </div>

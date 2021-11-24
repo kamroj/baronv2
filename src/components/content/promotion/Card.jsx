@@ -1,15 +1,27 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
+import ClikCursor from "../../../assets/images/click_cursor.png"
+import ClikedCursor from "../../../assets/images/click_cursor_clicked.png"
 
 import "./Card.scss";
 
 export default function Card({ frontCoverDesc, backCoverHeader, backCoverDisc, backCoverImage }) {
+  
+  const cursorPosSetting = "6 0, auto"
   const [flipped, setFlipped] = useState(false);
+  const [cursor, setCursor] = useState(`url(${ClikCursor}) ${cursorPosSetting}`)
 
   return (
     <div>
-      <ReactCardFlip isFlipped={flipped} >
-        <button onClick={() => setFlipped(true)} className="card-front-cover">
+      <ReactCardFlip isFlipped={flipped}>
+        <button
+          style={{ cursor: cursor }}
+          onClick={() => setFlipped(true)}
+          className="card-front-cover"
+          onMouseLeave={() => setCursor(`url(${ClikCursor}) ${cursorPosSetting}`)}
+          onMouseDown={() => setCursor(`url(${ClikedCursor}) ${cursorPosSetting}`)}
+          onMouseUp={() => setCursor(`url(${ClikCursor}) ${cursorPosSetting}`)}
+        >
           <div className="card-front-container">
             <span>{frontCoverDesc}</span>
           </div>
