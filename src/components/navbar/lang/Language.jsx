@@ -10,7 +10,7 @@ export default function Language({ mainDivStyle, dropDownStyle, onClick }) {
   const [flag, setFlag] = useState(undefined);
 
   useEffect(() => {
-    setFlag(`flag-icon-${Cookies.get("i18next")}`);
+    setFlag(`flag-icon-${Cookies.get("i18next") ?? document.documentElement.lang}`);
   }, []);
 
   function changeLang(code) {
