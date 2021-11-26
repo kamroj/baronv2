@@ -1,56 +1,81 @@
 @import url("http://fonts.cdnfonts.com/css/apocalypse");
 
 .react-card-flip {
-  margin: 20px;
+  margin: 15px;
+}
+
+.card-front-container,
+.card-back-container {
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  height: 250px;
+  width: 150px;
+  border: 1px solid;
+  color: whitesmoke;
+  padding: 0;
+  margin: 0;
 }
 
 .card-front-container {
   font-family: "Apocalypse", sans-serif;
-  color: whitesmoke;
+  justify-content: center;
+  border-color: green;
   font-size: 100px;
 }
 
 .card-back-container {
-  display: flex;
+  border-color: rgba(255, 0, 0, 0.733);
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  width: 100%;
-  color: whitesmoke;
+}
+
+.card-back-container:hover {
+  cursor: default;
 }
 
 .card-back-header,
 .card-back-discount {
   background-color: rgba(0, 0, 0, 0.842);
   padding: 10px 0;
-}
-
-.card-back-header {
-  color: whitesmoke;
-}
-
-.card-back-discount {
   color: whitesmoke;
 }
 
 .card-front-cover,
 .card-back-cover {
-  height: 250px;
-  width: 150px;
-  border: 1px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
+  height: 100%;
+  width: 100%;
   padding: 0;
 }
 
 .card-front-cover {
-  border-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back-cover-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.card-back-cover-background-image {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: -1;
+  filter: brightness(0.5);
 }
 
 $pulsebtn-anim-dur: 1s;
-.card-front-cover:hover {
+.card-front-container:hover {
   -webkit-animation: pulsecard $pulsebtn-anim-dur ease-in-out infinite alternate;
   -moz-animation: pulsecard $pulsebtn-anim-dur ease-in-out infinite alternate;
   -ms-animation: pulsecard $pulsebtn-anim-dur ease-in-out infinite alternate;
@@ -59,31 +84,12 @@ $pulsebtn-anim-dur: 1s;
 
 $pulse-anim-dur: 1.5s;
 $pulse-anim-cubic-bezier: cubic-bezier(0.82, 0.01, 0.04, 0.97);
-.card-front-cover-clicked {
+.card-front-clicked {
   box-shadow: 0 0 0 0 rgba(128, 0, 0, 0.692);
   -webkit-animation: pulse $pulse-anim-dur forwards $pulse-anim-cubic-bezier;
   -moz-animation: pulse $pulse-anim-dur forwards $pulse-anim-cubic-bezier;
   -ms-animation: pulse $pulse-anim-dur forwards $pulse-anim-cubic-bezier;
   animation: pulse $pulse-anim-dur forwards $pulse-anim-cubic-bezier;
-}
-
-.card-back-cover {
-  border-color: rgba(255, 0, 0, 0.733);
-}
-
-.card-back-cover:hover {
-  cursor: default;
-}
-
-.card-back-cover-background-image {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  z-index: -1;
-  filter: brightness(0.5);
 }
 
 $pulse-box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
@@ -141,5 +147,44 @@ $pulse-box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
   }
   to {
     background-color: rgba(5, 66, 5, 0.884);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .react-card-flip {
+    margin: 10px;
+  }
+
+  .card-front-container,
+  .card-back-container {
+    height: 50px;
+    width: 80vw;
+  }
+
+  .card-front-container {
+    font-size: 30px;
+  }
+
+  .card-back-container {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  .card-back-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-back-mobile-desc {
+    color: whitesmoke;
+  }
+
+  .card-back-cover-background-image{
+    position: static;
+    width: 10%;
   }
 }

@@ -1,10 +1,10 @@
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import FadeIn from "react-fade-in";
 import { Trans, useTranslation } from "react-i18next";
 import { Link, scroller } from "react-scroll";
+import { IsMobileContext } from "../../../App";
 import Video from "../../../assets/video/beer.webm";
-import useWindowDimensions from "../../../hooks/useWindowDimensionsHook";
 import Language from "../../navbar/lang/Language";
 import { ElementNames, NavbarData, ScrollerProp } from "../../navbar/NavbarData";
 import "./Welcome.scss";
@@ -12,17 +12,13 @@ import "./Welcome.scss";
 export default function Welcome() {
   const menuBtnWidth = "14vw";
   const menuBtnHeight = "5vh";
-  const mobileWidth = 650;
 
   const { t } = useTranslation();
   const [logoHovered, setLogoHovered] = useState(false);
   const [menuDisplayed, setMenuDisplayed] = useState(false);
   const [menuButtonDisabled, setMenuButtonDisabled] = useState(true);
-  const { windowWidth } = useWindowDimensions();
-
   const scrollTargetRef = useRef(null);
-
-  const isMobile = () => windowWidth < mobileWidth;
+  const isMobile = useContext(IsMobileContext)
 
   function calculatePointOnCircle(radius, angle, cx, cy) {
     angle *= Math.PI / 180;
@@ -96,7 +92,7 @@ export default function Welcome() {
     <section className="welcome-section" ref={scrollTargetRef}>
       {!menuDisplayed && <Language mainDivStyle={{ position: "absolute", right: "0.5vw", top: "1vh" }} />}
 
-      <video id="welcome-background-video" muted={true} autoPlay loop>
+      <video id="welcome-background-video" muted={true} autoPlay loop playsInline disablePictureInPicture={true}>
         <source src={Video} type="video/webm" />
       </video>
 

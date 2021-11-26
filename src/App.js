@@ -6,25 +6,31 @@ import AboutUs from "./components/content/aboutus/AboutUs";
 import { Element } from "react-scroll";
 import Welcome from "./components/content/welcome/Welcome";
 import Gallery from "./components/content/gallery/Gallery";
+import useWindowDimensions from "./hooks/useWindowDimensionsHook";
 import Reservation from "./components/content/reservation/Reservation";
 import Promotion from "./components/content/promotion/Promotion";
 
+export const IsMobileContext = React.createContext();
 
 function App() {
+  const { windowWidth } = useWindowDimensions();
+  const isMobile = (mobileWidth = 650) => windowWidth < mobileWidth;
+
   return (
-    <div>
-      <Element name="top-element" />
-      <Welcome />
+    <IsMobileContext.Provider value={isMobile}>
       <div>
-        <Navbar />
-        <AboutUs />
-        <Gallery />
-        <Reservation />
-        <Promotion />
-        <Reservation />
+        <Element name="top-element" />
+        <Welcome />
+        <div>
+          <Navbar />
+          <AboutUs />
+          <Gallery />
+          <Reservation />
+          <Promotion />
+        </div>
+        {/* <MessengerCustomerChat pageId="229571084064511" appId="1520264291685156" /> */}
       </div>
-      {/* <MessengerCustomerChat pageId="229571084064511" appId="1520264291685156" /> */}
-    </div>
+    </IsMobileContext.Provider>
   );
 }
 

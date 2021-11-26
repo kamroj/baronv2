@@ -24,3 +24,14 @@
   padding: 0 40px;
   padding-bottom: 20px;
 }
+
+@media screen and (max-width: 650px) { 
+  .promotion-header {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 40px 20px 40px;
+    font-size: 20px;
+  }
+
+}
