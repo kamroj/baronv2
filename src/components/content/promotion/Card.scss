@@ -1,4 +1,11 @@
-@import url("http://fonts.cdnfonts.com/css/apocalypse");
+// FONT
+
+@font-face {
+  font-family: "apocalypse";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../../assets/font/apocalypse-webfont.woff2") format("woff2"), url("../../../assets/font/apocalypse-webfont.woff") format("woff");
+}
 
 .react-card-flip {
   margin: 15px;
@@ -18,7 +25,7 @@
 }
 
 .card-front-container {
-  font-family: "Apocalypse", sans-serif;
+  font-family: "apocalypse";
   justify-content: center;
   border-color: green;
   font-size: 100px;
