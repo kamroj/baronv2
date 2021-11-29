@@ -17,7 +17,7 @@ export default function LoadingPage() {
       </div>
       <div className="loading-bar">
         <div className="loading-bar-anim" style={{width: `${progression() > 100 ? 100 : progression()}%`}}/>
-        <span className="loading-bar-desc">LOADING</span>
+        <span className="loading-bar-desc">OPENING PROGRESS</span>
       </div>
     </div>
   );
