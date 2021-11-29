@@ -1,0 +1,85 @@
+.loading-page-container {
+  align-items: center;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.loading-page-logo-container {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+#loading-page-baron-logo-img {
+  width: 350px;
+}
+
+.loading-bar {
+  font-size: 20px;
+  align-items: center;
+  border: 1px solid;
+  border-color: green;
+  border-radius: 5px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  position: relative;
+  width: 70%;
+}
+
+.loading-bar-anim {
+  position: absolute;
+  content: "";
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 35%;
+  filter: blur(5px);
+  background: linear-gradient(to right, #000000, #003b03, #027002, #01880c, #027002, #003b03, #000000);
+  background-size: 200% 200%;
+  animation: animateGlow 1.25s linear infinite;
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .loading-page-logo-container {
+    display: flex;
+    margin-bottom: 75px;
+  }
+
+  #loading-page-baron-logo-img {
+    width: 250px;
+  }
+
+  .loading-bar {
+    font-size: 16px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .loading-page-logo-container {
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  #loading-page-baron-logo-img {
+    width: 150px;
+  }
+
+  .loading-bar {
+    font-size: 14px;
+    height: 30px;
+  }
+}
