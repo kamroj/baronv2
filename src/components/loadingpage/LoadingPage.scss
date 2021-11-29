@@ -26,6 +26,7 @@
   display: flex;
   height: 50px;
   justify-content: center;
+  max-width: 1000px;
   position: relative;
   width: 70%;
 }
@@ -52,7 +53,7 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   .loading-page-logo-container {
     display: flex;
     margin-bottom: 75px;
@@ -68,7 +69,7 @@
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 500px) {
   .loading-page-logo-container {
     display: flex;
     margin-bottom: 50px;
