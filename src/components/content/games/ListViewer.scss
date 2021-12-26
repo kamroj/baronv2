@@ -1,0 +1,49 @@
+.list-viewer-main-container {
+  width: 90%;
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.list-viewer-list-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  overflow: scroll;
+  overflow-x: hidden;
+  direction: rtl;
+  list-style: none;
+  cursor: pointer;
+}
+
+.list-viewer-list-buttons-container::-webkit-scrollbar {
+  width: 1px;   
+}
+
+.list-viewer-list-buttons-container::-webkit-scrollbar-track {
+  background: rgba(87, 86, 86, 0.322);        /* color of the tracking area */
+}
+
+.list-viewer-list-buttons-container::-webkit-scrollbar-thumb {
+  background-color: green;    /* color of the scroll thumb */
+}
+
+.list-viewer-display-button,
+.list-viewer-display-button-selected  {
+  background-color: transparent;
+  border: 0;
+  color: whitesmoke;
+}
+
+.list-viewer-display-button-selected {
+  color: green;
+}
+
+.list-viewer-display-continer {
+  width: 50%;
+}
+
+.list-viewer-display-img {
+  height: 500px;
+}
