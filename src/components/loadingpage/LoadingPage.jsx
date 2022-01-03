@@ -5,7 +5,7 @@ import BaronLogoPng from "./logo.png";
 
 export default function LoadingPage() {
   const startDate = new Date("11/01/2021")
-  const endDate = new Date("01/06/2022")
+  const endDate = new Date("01/14/2022")
   const duration = endDate.getTime() - startDate.getTime();
 
   const progression = () => ((new Date().getTime() - startDate.getTime()) * 100) / duration
