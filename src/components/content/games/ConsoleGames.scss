@@ -1,3 +1,29 @@
+.games-main-container {
+  color: whitesmoke;
+  font-weight: 100;
+}
+
+.games-title-container {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 40px 20px;
+  background-color: #03270175;
+}
+
+.games-type-desc-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 50px 0px;
+  font-size: 30px;
+}
+
 .console-games-container {
   width: 100%;
   align-items: center;

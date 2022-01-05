@@ -1,44 +1,61 @@
 import React, { useEffect, useState, useCallback } from "react";
 import "./ListViewer.scss";
-import { ConsoleGamesList } from "./ConsoleGamesList";
 
-export default function ListViewer() {
-  const consoleGamesListW = ConsoleGamesList.map((item) => {
-    item.ref = React.createRef();
-    return item;
-  });
+export default function ListViewer({ gameList, scrollDelayOffset = 3000, scrollAfterSelectDelayOffset = 10000 }) {
+  const games = gameList
+    .sort((f, s) => f.title.localeCompare(s.title))
+    .map((item) => {
+      item.ref = React.createRef();
+      return item;
+    });
 
   const [selectedItem, setSelectedItem] = useState(0);
-  const [delay, setDelay] = useState(500);
+  const [delay, setDelay] = useState(scrollDelayOffset);
+  const [currentScrollTop, setCurrentScrollTop] = useState(null);
 
   const selectItem = useCallback(
     (index) => {
       setSelectedItem(index);
 
-      const currentListElement = consoleGamesListW[index].ref.current;
+      const currentListElement = games[index].ref.current;
+
+      if (!currentListElement) return;
+
       const parentNode = currentListElement.parentNode;
       const scrollInsideOffset = parentNode.offsetTop + parentNode.offsetHeight - currentListElement.offsetHeight;
 
-      parentNode.scrollTop = currentListElement.offsetTop - scrollInsideOffset;
+      let scrollTop = currentListElement.offsetTop - scrollInsideOffset;
+
+      if (currentScrollTop !== null && currentScrollTop !== scrollTop) {
+        setDelay(scrollAfterSelectDelayOffset);
+        return;
+      }
+
+      console.log(`before parentNode.scrollTop = ${parentNode.scrollTop}`);
+      parentNode.scrollTop = scrollTop;
+      setCurrentScrollTop(scrollTop);
+
+      console.log(`parentNode.scrollTop = ${parentNode.scrollTop}`);
+      console.log(`scroll top = ${scrollTop}`);
     },
-    [consoleGamesListW]
+    [games, currentScrollTop, scrollAfterSelectDelayOffset]
   );
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      selectItem(selectedItem === ConsoleGamesList.length - 1 ? 0 : selectedItem + 1);
-      if (delay !== 3000) setDelay(3000);
+      selectItem(selectedItem === gameList.length - 1 ? 0 : selectedItem + 1);
+      if (delay !== scrollDelayOffset) setDelay(scrollDelayOffset);
     }, delay);
 
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [selectedItem, delay, selectItem]);
+  }, [selectedItem, delay, selectItem, gameList.length, scrollDelayOffset]);
 
   return (
     <div className="list-viewer-main-container">
       <div className="list-viewer-list-buttons-container">
-        {consoleGamesListW.map((item, index) => {
+        {games.map((item, index) => {
           return (
             <li
               key={index}
@@ -46,7 +63,7 @@ export default function ListViewer() {
               className={`list-viewer-display-button${index === selectedItem ? "-selected" : ""}`}
               onClick={() => {
                 selectItem(index);
-                setDelay(10000);
+                setDelay(scrollAfterSelectDelayOffset);
               }}
             >
               {item.title}
@@ -55,7 +72,7 @@ export default function ListViewer() {
         })}
       </div>
       <div className="list-viewer-display-continer">
-        <img src={ConsoleGamesList[selectedItem].img} alt="logo" className="list-viewer-display-img" />
+        <img src={gameList[selectedItem].img} alt="logo" className="list-viewer-display-img" />
       </div>
     </div>
   );
