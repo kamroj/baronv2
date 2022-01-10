@@ -1,9 +1,40 @@
-.list-viewer-main-container {
+.games-type-desc-container {
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 50px;
+  padding: 10px 20px 30px 20px;
+}
+
+.games-type-desc-legend-left,
+.games-type-desc-legend-right {
+  float: none;
+  width: auto;
+  padding: 0px 20px;
+  margin: none;
+}
+
+.games-type-desc-legend-left {
+  margin-left: 20px;
+}
+
+.games-type-desc-legend-right {
+  margin-right: 20px;
+}
+
+.list-viewer-main-container-left,
+.list-viewer-main-container-right {
   width: 90%;
   height: 500px;
   margin-top: 50px;
   display: flex;
   justify-content: space-evenly;
+}
+
+.list-viewer-main-container-right {
+  flex-direction: row-reverse;
 }
 
 .list-viewer-list-buttons-container {
@@ -19,19 +50,27 @@
 }
 
 .list-viewer-list-buttons-container::-webkit-scrollbar {
-  width: 1px;   
+  width: 1px;
 }
 
 .list-viewer-list-buttons-container::-webkit-scrollbar-track {
-  background: rgba(87, 86, 86, 0.322);        /* color of the tracking area */
+  background: rgba(87, 86, 86, 0.322); /* color of the tracking area */
 }
 
 .list-viewer-list-buttons-container::-webkit-scrollbar-thumb {
-  background-color: green;    /* color of the scroll thumb */
+  background-color: green; /* color of the scroll thumb */
+}
+
+.list-viewer-list-buttons-container-left {
+  direction: rtl;
+}
+
+.list-viewer-list-buttons-container-right {
+  direction: ltr;
 }
 
 .list-viewer-display-button,
-.list-viewer-display-button-selected  {
+.list-viewer-display-button-selected {
   background-color: transparent;
   border: 0;
   color: whitesmoke;
@@ -54,8 +93,7 @@
   width: auto;
 }
 
-@media screen and (max-width: 650px) { 
-
+@media screen and (max-width: 650px) {
   .list-viewer-main-container {
     flex-direction: column-reverse;
     align-items: center;
