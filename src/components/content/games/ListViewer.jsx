@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from "react";
-import Iframe from "react-iframe-click";
 import "./ListViewer.scss";
 
 export default function ListViewer({ gameList, title, reverseDirection = false, scrollDelayOffset = 3_000, scrollAfterSelectDelayOffset = 10_000 }) {
