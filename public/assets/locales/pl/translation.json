@@ -58,7 +58,11 @@
   
   "promotion_card_sun_front_desc_key": "NI",
   "promotion_card_sun_back_header_key": "DRINK",
-  "promotion_card_sun_back_disc_key": "-5 PLN"
+  "promotion_card_sun_back_disc_key": "-5 PLN",
 
+  "__GAMES": "GAMES",
+  "games_header_key": "<p>W Bar<green>ON</green>ie możesz zagrać w gry na konsolach Xbox <green>ONE</green> badź w gry planszówkowe.<br/> Zobacz co obecnie mamy na stanie. Lista będzie cały czas aktualizowana!</p>",
+  "games_header_console_games": "GRY NA KONSOLE",
+  "games_header_board_games": "GRY PLANSZOWE"
 
 }
