@@ -14,6 +14,7 @@
   width: auto;
   padding: 0px 20px;
   margin: none;
+  
 }
 
 .games-type-desc-legend-left {
@@ -26,9 +27,8 @@
 
 .list-viewer-main-container-left,
 .list-viewer-main-container-right {
-  width: 90%;
+  width: 100%;
   height: 500px;
-  margin-top: 50px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -41,12 +41,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 40%;
   overflow: scroll;
   overflow-x: hidden;
   direction: rtl;
   list-style: none;
-  cursor: pointer;
+  padding: 0 10px;
 }
 
 .list-viewer-list-buttons-container::-webkit-scrollbar {
@@ -71,10 +72,15 @@
 
 .list-viewer-display-button,
 .list-viewer-display-button-selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   border: 0;
   color: whitesmoke;
   margin: 2px 0px;
+  width: 100%;
+  cursor: pointer;
 }
 
 .list-viewer-display-button-selected {
@@ -93,23 +99,49 @@
   width: auto;
 }
 
-@media screen and (max-width: 650px) {
-  .list-viewer-main-container {
+@media screen and (max-width: 820px) {
+  .list-viewer-main-container-left,
+  .list-viewer-main-container-right {
     flex-direction: column-reverse;
     align-items: center;
+    margin-top: 0px;
   }
 
-  .list-viewer-list-buttons-container {
+  .list-viewer-list-buttons-container-left,
+  .list-viewer-list-buttons-container-right {
     height: 150px;
     width: 80%;
-    direction: ltr;
+    direction: rtl;
   }
 
-  .list-viewer-display-contine {
+  .list-viewer-display-continer {
     width: 100%;
   }
 
   .list-viewer-display-img {
     max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .games-type-desc-container {
+    font-size: 12px;
+    margin: 25px;
+  }
+
+  .list-viewer-display-img {
+    max-height: 200px;
+  }
+
+  legend {
+    font-size: 16px;
+  }
+
+  .games-type-desc-legend-left {
+    margin-left: 0px;
+  }
+  
+  .games-type-desc-legend-right {
+    margin-right: 0px;
   }
 }
