@@ -15,10 +15,14 @@ export default function Games() {
     <Element name={ElementNames.games}>
       <div className="games-main-container">
         <div className="games-title-container">
-         <Trans i18nKey="games_header_key" components={{ green: <span style={{ color: "rgb(0, 144, 0)"}} /> }} />
+          <Trans i18nKey="games_header_key" components={{ green: <span style={{ color: "rgb(0, 144, 0)" }} /> }} />
         </div>
-        <ListViewer title={t('games_header_console_games')} gameList={ConsoleGamesList} />
-        <ListViewer title={t('games_header_board_games')} gameList={BoardGamesList} reverseDirection={true} />
+        <div className="games-list-viewer-container">
+          <ListViewer title={t("games_header_console_games")} gameList={ConsoleGamesList} />
+        </div>
+        <div className="games-list-viewer-container">
+          <ListViewer title={t("games_header_board_games")} gameList={BoardGamesList} reverseDirection={true} />
+        </div>
       </div>
     </Element>
   );
