@@ -10,6 +10,7 @@ import useWindowDimensions from "./hooks/useWindowDimensionsHook";
 import Reservation from "./components/content/reservation/Reservation";
 import Promotion from "./components/content/promotion/Promotion";
 import Games from "./components/content/games/Games";
+import Tournaments from "./components/content/tournaments/Tournaments";
 
 export const IsMobileContext = React.createContext();
 
@@ -29,6 +30,7 @@ function App() {
           <Reservation />
           <Promotion />
           <Games />
+          <Tournaments />
         </div>
         {/* <MessengerCustomerChat pageId="229571084064511" appId="1520264291685156" /> */}
       </div>
