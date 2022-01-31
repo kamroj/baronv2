@@ -6,12 +6,17 @@
   font-size: 20px;
   font-weight: 300;
   height: 300px;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .tournaments-description {
   text-align: center;
   width: 80%;
+}
+
+.tournaments-description-contact{
+  margin-top: 5px;
+  font-size: 16px;
 }
 
 .tournaments-events-btn {
@@ -30,4 +35,16 @@
 .tournaments-events-btn:hover {
   color: whitesmoke;
   border: 1px solid rgb(101, 175, 4);
+}
+
+
+@media screen and (max-width: 500px) { 
+  .tournaments-main-container {
+    font-size: 14px;
+  }
+
+  .tournaments-description-contact{
+    margin-top: 5px;
+    font-size: 12px;
+  }
 }

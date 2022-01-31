@@ -67,7 +67,8 @@
 
 
   "__TOURNAMENTS": "TOURNAMENTS",
-  "tournaments_desc_key": "<p>Lubisz rywalizację? <br />Weź udział w naszych TURNIEJACH!<br />Dla większych grup lub firm istnieje możliwość organizacji specjalnych turniejów! <br />Przejdz do sekcji kontakty aby skontaktować się z nami.</p>",
+  "tournaments_desc_key": "<p>Lubisz rywalizację? <br />Weź udział w naszych <color>TURNIEJACH</color>!</p>",
+  "tournaments_desc_contact_key": "<p>Dla większych grup lub firm istnieje możliwość organizacji specjalnych turniejów! <br />Przejdz do sekcji kontakty aby skontaktować się z nami.</p>",
   "tournaments_btn_desc_key": "SPRAWDŹ NADCHODZĄCE TURNIEJE"
 
 }
