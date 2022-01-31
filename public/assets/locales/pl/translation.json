@@ -63,6 +63,11 @@
   "__GAMES": "GAMES",
   "games_header_key": "<p>W Bar<green>ON</green>ie możesz zagrać w gry na konsolach Xbox <green>ONE</green> badź w gry planszówkowe.<br/> Zobacz co obecnie mamy na stanie. Lista będzie cały czas aktualizowana!</p>",
   "games_header_console_games": "GRY NA KONSOLE",
-  "games_header_board_games": "GRY PLANSZOWE"
+  "games_header_board_games": "GRY PLANSZOWE",
+
+
+  "__TOURNAMENTS": "TOURNAMENTS",
+  "tournaments_desc_key": "<p>Lubisz rywalizację? <br />Weź udział w naszych TURNIEJACH!<br />Dla większych grup lub firm istnieje możliwość organizacji specjalnych turniejów! <br />Przejdz do sekcji kontakty aby skontaktować się z nami.</p>",
+  "tournaments_btn_desc_key": "SPRAWDŹ NADCHODZĄCE TURNIEJE"
 
 }

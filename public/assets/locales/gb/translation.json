@@ -64,6 +64,10 @@
   "__GAMES": "GAMES",
   "games_header_key": "<p>In Bar<green>ON</green> you can either play console games on Xbox <green>ONE</green> or board games.<br/> Check out what we do have. List will be kept constantly updated!</p>",
   "games_header_console_games": "CONSOLE GAMES",
-  "games_header_board_games": "BOARD GAMES"
+  "games_header_board_games": "BOARD GAMES",
 
+
+  "__TOURNAMENTS": "TOURNAMENTS",
+  "tournaments_desc_key": "<p>Do you like competition? <br />Join our TOURNAMENTS!<br />We organize special kind of tournaments for bigger groups and companies! <br />Go to Contact section to contact us.</p>",
+  "tournaments_btn_desc_key": "CHECK OUT UPCOMING TOURNAMENTS"
 }
