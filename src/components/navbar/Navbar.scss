@@ -5,6 +5,7 @@ $background-color: #01210059;;
 .navbar-container-ref-wrapper {
   height: $min-nav-height;
   position: sticky;
+  transform: translate3d(0,0,0);
   top: 0;
   width: 100%;
   z-index: 5;
