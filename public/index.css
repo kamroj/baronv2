@@ -1,0 +1,36 @@
+.loading-container {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.loading {
+  color: white;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(255 255 255 / 20%);
+  border-radius: 50%;
+  border-top-color: rgb(0 255 31);
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  left: calc(50%);
+  top: calc(50%);
+  position: fixed;
+  z-index: 1;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
