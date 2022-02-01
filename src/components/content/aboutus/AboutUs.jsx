@@ -52,16 +52,16 @@ export default function AboutUs() {
             <div className="aboutus-splash-art-content">
               <img src={dimension} alt="dimensions" className="aboutus-splash-art" />
               <span className="aboutus-splash-art-desc-container">
-                {countWrapper(5)}
+                {countWrapper(4)}
                 <span className="aboutus-splash-art-desc" style={{ whiteSpace: "nowrap" }}>
-                  {t("aboutus_art_header_room_key")} /&nbsp;{countWrapper(130, "")}m<sup style={{ top: 5 }}>2</sup>
+                  {t("aboutus_art_header_room_key")} /&nbsp;{countWrapper(110, "")}m<sup style={{ top: 5 }}>2</sup>
                 </span>
               </span>
             </div>
             <div className="aboutus-splash-art-content">
               <img src={gameConsole} alt="gameConsole" className="aboutus-splash-art" />
               <span className="aboutus-splash-art-desc-container">
-                {countWrapper(10)}
+                {countWrapper(7)}
                 <span className="aboutus-splash-art-desc">{t("aboutus_art_header_consoles_key")}</span>
               </span>
             </div>
