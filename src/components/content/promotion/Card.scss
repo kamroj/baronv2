@@ -17,7 +17,7 @@
   background-color: transparent;
   align-items: center;
   height: 250px;
-  width: 150px;
+  width: 140px;
   border: 1px solid;
   color: whitesmoke;
   padding: 0;
@@ -157,7 +157,7 @@ $pulse-box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .react-card-flip {
     margin: 10px;
   }

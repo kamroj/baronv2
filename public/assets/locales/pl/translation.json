@@ -60,6 +60,7 @@
   "promotion_card_sun_back_header_key": "DRINK",
   "promotion_card_sun_back_disc_key": "-5 PLN",
 
+
   "__GAMES": "GAMES",
   "games_header_key": "<p>W Bar<green>ON</green>ie możesz zagrać w gry na konsolach Xbox <green>ONE</green> badź w gry planszówkowe.<br/> Zobacz co obecnie mamy na stanie. Lista będzie cały czas aktualizowana!</p>",
   "games_header_console_games": "GRY NA KONSOLE",
@@ -69,6 +70,9 @@
   "__TOURNAMENTS": "TOURNAMENTS",
   "tournaments_desc_key": "<p>Lubisz rywalizację? <br />Weź udział w naszych <color>TURNIEJACH</color>!</p>",
   "tournaments_desc_contact_key": "<p>Dla większych grup lub firm istnieje możliwość organizacji specjalnych turniejów! <br />Przejdz do sekcji kontakty aby skontaktować się z nami.</p>",
-  "tournaments_btn_desc_key": "SPRAWDŹ NADCHODZĄCE TURNIEJE"
+  "tournaments_btn_desc_key": "SPRAWDŹ NADCHODZĄCE TURNIEJE",
 
+
+  "__CONTACT": "CONTACT",
+  "contact_details_key": "<p>BarON - pub dla graczy! <br /><br />Adres:<br /><green>ul. Stefana Batorego 1</green><br /><green>31-135 Kraków</green><br /><br />Kontakt: <br />Telefon: <green>500 252 682</green><br />Email: <green>baronkrakow@gmail.com</green><br /><br />Godziny otwarcia:<br />Niedziela - Czwartek: <green>17:00 - 00:00</green><br />Piątek - Sobota: <green>17:00 - 01:00</green><br /><br />Nr konta: <green>91 1050 1445 1000 0092 9139 6092</green><br /></p>"
 }

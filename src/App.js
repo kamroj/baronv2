@@ -11,12 +11,13 @@ import Reservation from "./components/content/reservation/Reservation";
 import Promotion from "./components/content/promotion/Promotion";
 import Games from "./components/content/games/Games";
 import Tournaments from "./components/content/tournaments/Tournaments";
+import Contact from "./components/content/contact/Contact";
 
 export const IsMobileContext = React.createContext();
 
 function App() {
   const { windowWidth } = useWindowDimensions();
-  const isMobile = (mobileWidth = 650) => windowWidth < mobileWidth;
+  const isMobile = (mobileWidth = 750) => windowWidth < mobileWidth;
 
   return (
     <IsMobileContext.Provider value={isMobile}>
@@ -31,6 +32,7 @@ function App() {
           <Promotion />
           <Games />
           <Tournaments />
+          <Contact />
         </div>
         {/* <MessengerCustomerChat pageId="229571084064511" appId="1520264291685156" /> */}
       </div>

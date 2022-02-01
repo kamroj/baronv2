@@ -1,0 +1,49 @@
+.contact-main-container {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  margin: 50px 0;
+}
+
+.contact-map-container {
+  width: 60%;
+  z-index: -1;
+  background: url(https://i.postimg.cc/bwkV9t0P/mapa-baron.png) center center no-repeat;
+  background-color: #393939;
+}
+
+.contact-contact-detials {
+  display: flex;
+  align-items: center;
+  padding: 30px 30px;
+  background-color: #01210079;
+  width: 40%;
+  font-weight: 100;
+  color: whitesmoke;
+}
+
+@media screen and (max-width: 1300px) {
+  .contact-contact-detials {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact-main-container {
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .contact-map-container {
+    background: url(https://i.postimg.cc/bwkV9t0P/mapa-baron.png) center;
+    height: 300px;
+    width: 100%;
+  }
+
+  .contact-contact-detials {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+  }
+}

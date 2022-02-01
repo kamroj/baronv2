@@ -70,5 +70,9 @@
   "__TOURNAMENTS": "TOURNAMENTS",
   "tournaments_desc_key": "<p>Do you like competition? <br />Join our <color>TOURNAMENTS</color>!</p>",
   "tournaments_desc_contact_key": "<p>We organize special kinds of tournaments for bigger groups and companies! <br />Go to Contact section to contact us.</p>",
-  "tournaments_btn_desc_key": "CHECK OUT UPCOMING TOURNAMENTS"
+  "tournaments_btn_desc_key": "CHECK OUT UPCOMING TOURNAMENTS",
+  
+
+  "__CONTACT": "CONTACT",
+  "contact_details_key": "<p>BarON - pub for gamers! <br /><br />Adress:<br /><green>Stefana Batorego 1</green><br /><green>31-135 Kraków</green><br /><br />Contact: <br />Phone number: <green>500 252 682</green><br />Email: <green>baronkrakow@gmail.com</green><br /><br />Opening hours:<br />Sunday - Thursday: <green>5pm - 12am</green><br />Friday - Saturday: <green>5pm - 1am</green><br /><br />Bank accaunt number: <green>91 1050 1445 1000 0092 9139 6092</green><br /></p>"
 }

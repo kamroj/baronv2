@@ -30,7 +30,6 @@ export default function Card({ frontCoverDesc, backCoverHeader, backCoverDisc, b
         </button>
 
         <button className={`card-back-container ${flipped ? "card-front-clicked" : ""}`}>
-          {/* {!isMobile() && <div className="card-back-cover-background-image" style={{ backgroundImage: `url(${backCoverImage})` }} />} */}
           {true && <div className="card-back-cover-background-image" style={{ backgroundImage: `url(${backCoverImage})` }} />}
           <div className="card-back-cover">
             {isMobile() ? (
