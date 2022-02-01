@@ -7,14 +7,14 @@ import { ElementNames, NavbarData, ScrollerProp } from "./NavbarData";
 import logo from "../../assets/images/logo.png";
 import Language from "./lang/Language";
 import { Link, scroller } from "react-scroll";
-import { useRect } from "../../hooks/useRectHook";
+// import { useRect } from "../../hooks/useRectHook";
 
 export default function Menu() {
   const { t } = useTranslation();
 
   const [toggleMenu, setToggleMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [rect, ref] = useRect();
+  // const [rect, ref] = useRect();
 
   const navbarRef = useRef(null);
   const toggleNav = () => setToggleMenu(!toggleMenu);
@@ -32,8 +32,8 @@ export default function Menu() {
   }, []);
 
   return (
-    <div className="navbar-container-ref-wrapper" ref={ref}>
-      {rect.y <= 0 && (<div className="navbar-container" ref={navbarRef}>
+    <div className="navbar-container-ref-wrapper">
+      <div className="navbar-container" ref={navbarRef}>
         <div className="navbar-items-container">
           <button
             className="navbar-logo-btn"
@@ -62,7 +62,7 @@ export default function Menu() {
           </>
         )}
       </div>
-      )}
+      )
     </div>
   );
 }
