@@ -14,9 +14,10 @@ i18n
   .use(LanguageDetecotr)
   .use(HttpApi)
   .init({
-    fallbackLng: "gb",
+    fallbackLng: "pl",
     detection: {
-      order: ['cookie', 'localStorage', 'path', 'subdomain', 'htmlTag'],
+      lookupCookie: 'i18nextlng',
+      order: ['cookie', 'localStorage', 'htmlTag'],
       caches: ['cookie']
     },
     backend: {
