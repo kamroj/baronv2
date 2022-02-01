@@ -4,7 +4,7 @@ import FadeIn from "react-fade-in";
 import { Trans, useTranslation } from "react-i18next";
 import { Link, scroller } from "react-scroll";
 import { IsMobileContext } from "../../../App";
-import Video from "../../../assets/video/beer.webm";
+import Video from "../../../assets/video/intro.mp4";
 import Language from "../../navbar/lang/Language";
 import { ElementNames, NavbarData, ScrollerProp } from "../../navbar/NavbarData";
 import "./Welcome.scss";
