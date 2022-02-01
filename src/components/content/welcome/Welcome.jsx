@@ -18,7 +18,7 @@ export default function Welcome() {
   const [menuDisplayed, setMenuDisplayed] = useState(false);
   const [menuButtonDisabled, setMenuButtonDisabled] = useState(true);
   const scrollTargetRef = useRef(null);
-  const isMobile = useContext(IsMobileContext)
+  const isMobile = useContext(IsMobileContext);
 
   function calculatePointOnCircle(radius, angle, cx, cy) {
     angle *= Math.PI / 180;
@@ -65,7 +65,7 @@ export default function Welcome() {
             position: "static",
           }
         : {
-            width: menuBtnWidth,
+            width: menuBtnWidth,  
             height: menuBtnHeight,
             left: `calc(${item.x}vw - ${menuBtnWidth} / 2)`,
             top: `calc(${item.y}vh - ${menuBtnHeight} / 2)`,
@@ -93,11 +93,6 @@ export default function Welcome() {
       {!menuDisplayed && <Language mainDivStyle={{ position: "absolute", right: "0.5vw", top: "1vh" }} />}
 
       <video id="welcome-background-video" autoPlay loop muted playsInline disablePictureinPictur src={Video} type="video/mp4" />
-
-      
-      {/* <video id="welcome-background-video" muted={true} autoPlay loop playsInline disablePictureInPicture={true}>
-        <source src={Video} type="video/webm" />
-      </video> */}
 
       <div className="welcome-content-container">
         <div className={`welcome-menu-background ${menuDisplayed ? "welcome-menu-background-fade-in" : "welcome-menu-background-fade-out"}`} />
