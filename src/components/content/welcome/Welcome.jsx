@@ -92,7 +92,7 @@ export default function Welcome() {
     <section className="welcome-section" ref={scrollTargetRef}>
       {!menuDisplayed && <Language mainDivStyle={{ position: "absolute", right: "0.5vw", top: "1vh" }} />}
 
-      <video id="welcome-background-video" autoPlay loop muted playsInline disablePictureinPictur src={Video} type="video/mp4" />
+      <video id="welcome-background-video" autoPlay loop muted playsInline src={Video} type="video/mp4" />
 
       <div className="welcome-content-container">
         <div className={`welcome-menu-background ${menuDisplayed ? "welcome-menu-background-fade-in" : "welcome-menu-background-fade-out"}`} />
