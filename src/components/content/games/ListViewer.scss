@@ -39,9 +39,9 @@
 
 .list-viewer-list-buttons-container {
   display: flex;
+  max-height: 90%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   overflow: scroll;
   overflow-x: hidden;
   direction: rtl;
