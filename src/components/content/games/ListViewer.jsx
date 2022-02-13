@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import "./ListViewer.scss";
 
-export default function ListViewer({ gameList, title, reverseDirection = false, scrollDelayOffset = 3_000, scrollAfterSelectDelayOffset = 10_000 }) {
+export default function ListViewer({ gameList, title, reverseDirection = false, scrollDelayOffset = 3_000, scrollAfterSelectDelayOffset = 30_000 }) {
   const direction = reverseDirection ? "right" : "left";
   const games = gameList
     .sort((f, s) => f.title.localeCompare(s.title))
