@@ -11,7 +11,7 @@ export const BoardGamesList = [
   },
   {
     title: "TEOTIHUACAN MIASTO BOGÓW",
-    img: "https://i.postimg.cc/tJkrcmQM/teotihuacan-miniatura-sklepik.png",
+    img: "https://i.postimg.cc/8cJpvVtP/teotihuacan-miniatura-sklepik.png",
     yt: "https://www.youtube.com/embed/RqskWK_mj1E"
   },
   {
@@ -90,8 +90,83 @@ export const BoardGamesList = [
     yt: "https://www.youtube.com/embed/RqskWK_mj1E"
   },
   {
+    title: "5 SEKUND",
+    img: "https://i.postimg.cc/4dZTnPGF/01778-150-01.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "DIAMENTY",
+    img: "https://i.postimg.cc/MGfFxQj3/diamenty.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "TAJNIACY",
+    img: "https://i.postimg.cc/Prkyv7v4/tajniacy.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "KOLEJKA",
+    img: "https://i.postimg.cc/QNBNK4ZH/kolejka.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "PANDEMIA",
+    img: "https://i.postimg.cc/VvRcPCb0/pandemia.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "CARCASSONNE",
+    img: "https://i.postimg.cc/Pf3jymh0/carcassone.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "FUDŻI",
+    img: "https://i.postimg.cc/dthLjQMm/fudzi.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "WIELKA KSIĘGA SZALEŃSTWA",
+    img: "https://i.postimg.cc/65L43WZ9/wielkaksiega.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "LOŻA SZYDERCÓW",
+    img: "https://i.postimg.cc/VkHbn7kv/LOZASZYD.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "GWIEZDNY MUNCHKIN",
+    img: "https://i.postimg.cc/sfhdr1hN/MUNCHINGWIEZDNY.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "MONTANA",
+    img: "https://i.postimg.cc/cLgd5ZSR/MONTANA.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "MUZA",
+    img: "https://i.postimg.cc/Nf8nszk3/MUZA.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "DROGA DO SZALEŃŚTWA",
+    img: "https://i.postimg.cc/nckC4n10/DROGADOSZALENSTWA.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "THE RESISTANCE",
+    img: "https://i.postimg.cc/RF7MvTsX/THERESISTANCE.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "7 CUDÓW ŚWIATA - POJEDYNEK",
+    img: "https://i.postimg.cc/xdG7CFQJ/CUDYSIWATA.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
     title: "OSADNICY",
-    img: "https://i.postimg.cc/zvjtGdkM/osadnicy.png",
+    img: "https://i.postimg.cc/MZDb3J6r/OSADNICY.png",
     yt: "https://www.youtube.com/embed/RqskWK_mj1E"
   }
 ];
