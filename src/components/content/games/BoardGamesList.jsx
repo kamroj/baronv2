@@ -165,6 +165,166 @@ export const BoardGamesList = [
     yt: "https://www.youtube.com/embed/RqskWK_mj1E"
   },
   {
+    title: "AEONS END",
+    img: "https://i.postimg.cc/SNhf8YKK/aeonsend.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "SCENARIUSZ ZA MILION",
+    img: "https://i.postimg.cc/mDpKkN4h/scenariuszzamilion.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "DECRYPTO",
+    img: "https://i.postimg.cc/G2bstGK0/decrypto.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "EGO",
+    img: "https://i.postimg.cc/vBd59D7y/ego.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "MAFIA",
+    img: "https://i.postimg.cc/hjk4h7V8/mafia.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "NEW FRONTIERS",
+    img: "https://i.postimg.cc/q7QCtQ7s/newfrontiers.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "SPADKOBIERCY",
+    img: "https://i.postimg.cc/sDwX41zz/spadkobiercy.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "CZÓŁKO",
+    img: "https://i.postimg.cc/4NhLzHV7/czolkoo.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "NA GRZYBY!",
+    img: "https://i.postimg.cc/rFmBrpF7/nagrzyby.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "OBÓZ NINJA",
+    img: "https://i.postimg.cc/q7PK8gTw/obozninja.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "STAR FLUXX",
+    img: "https://i.postimg.cc/Pf3Swz7Q/starfluxx.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "WYSOKIE NAPIĘCIE",
+    img: "https://i.postimg.cc/hGmLZNKK/wysokienapiecie.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "PATCHWORK",
+    img: "https://i.postimg.cc/bJD1SMF7/patchwork.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "LITTLE TOWN",
+    img: "https://i.postimg.cc/tgtF3WX5/littletown.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "TAJNIACY DUET",
+    img: "https://i.postimg.cc/d1TR71WR/tajniacyduet.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "MORZE CHMUR",
+    img: "https://i.postimg.cc/ryGJkD7x/morzechmur.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "MAGIC MAZE",
+    img: "https://i.postimg.cc/VNn8s9qz/magicmaze.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "PARTY TIME",
+    img: "https://i.postimg.cc/4394kr4d/partytime.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "NATURALNIE",
+    img: "https://i.postimg.cc/XNm8nPb5/naturalnie.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "MONOLITH ARENA",
+    img: "https://i.postimg.cc/ZnHjYbFx/monolitharena.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "KONCEPT",
+    img: "https://i.postimg.cc/1RFbDwML/koncept.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "DOMINION",
+    img: "https://i.postimg.cc/WzGQPq4W/dominion.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "BOLIDY",
+    img: "https://i.postimg.cc/5N08FdBy/bolidy.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "ZOMBIE FLUXX",
+    img: "https://i.postimg.cc/qqxRmG9j/zombiefluxx.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "PSYCHO DROPSY",
+    img: "https://i.postimg.cc/3N3TSQjD/psychodropsy.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "AVALON",
+    img: "https://i.postimg.cc/br3bB8nG/Avalon.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "TIMELINE",
+    img: "https://i.postimg.cc/25brVf74/timeline.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "GIZMOS",
+    img: "https://i.postimg.cc/XJtTmZRh/gizmos.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "EX LIBRIS",
+    img: "https://i.postimg.cc/kM2CsS67/exlibris.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "ROSYJSKA RULETKA",
+    img: "https://i.postimg.cc/JhXJj0Nx/rosyjskaruletka.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "TAJEMNICZE DOMOSTWO",
+    img: "https://i.postimg.cc/tCt9njn6/tajemniczedomostwo.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "PATHFINDER",
+    img: "https://i.postimg.cc/cLHP1yR0/pathfinder.png",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
     title: "OSADNICY",
     img: "https://i.postimg.cc/MZDb3J6r/OSADNICY.png",
     yt: "https://www.youtube.com/embed/RqskWK_mj1E"
