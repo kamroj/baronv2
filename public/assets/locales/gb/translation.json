@@ -18,7 +18,7 @@
   "aboutus_art_header_room_key": "ROOMS",
   "aboutus_art_header_consoles_key": "XBOX ONE",
   "aboutus_art_header_board_games_key": "BOARD GAMES",
-  "aboutus_desc_key": "<p>Bar<span>ON</span> - pub / bar located in the very center of Cracow (ul. Stefana Batorego 1). Bar with excellent beers and drinks, where you can play togheter with your friends the most popular games for the XBOX ONE consoles (FIFA 22, Mortal Kombat XI, Tekken 7, Forza 7 and more) or party / strategy board games.</p><p>Obviously, our customers play games (console and board games) free of charge!</p><p><br />So, let's go Bar<span>ON</span>!</p>",
+  "aboutus_desc_key": "<p>Bar<span>ON</span> - pub / bar located in the very center of Cracow (ul. Stefana Batorego 1). Bar with excellent beers and drinks, where you can play togheter the most popular games for the XBOX ONE consoles (FIFA 22, Mortal Kombat XI, Tekken 7, Forza 7 and more) or party / strategy board games with your friends.</p><p>Obviously, our customers play games (console and board games) free of charge!</p><p><br />So, let's go Bar<span>ON</span>!</p>",
 
 
   "__GALLERY": "GALLERY",
@@ -62,7 +62,7 @@
 
   
   "__GAMES": "GAMES",
-  "games_header_key": "<p>In Bar<green>ON</green> you can either play console games on Xbox <green>ONE</green> or board games.<br/> Check out what we do have. List will be kept constantly updated!</p>",
+  "games_header_key": "<p>In Bar<green>ON</green> you can either play console games on Xbox <green>ONE</green> or board games.<br/> Check out what we have. List will be kept constantly updated!</p>",
   "games_header_console_games": "CONSOLE GAMES",
   "games_header_board_games": "BOARD GAMES",
 
