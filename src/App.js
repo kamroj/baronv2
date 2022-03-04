@@ -34,7 +34,6 @@ function App() {
           <Tournaments />
           <Contact />
         </div>
-        {/* <MessengerCustomerChat pageId="229571084064511" appId="1520264291685156" /> */}
       </div>
     </IsMobileContext.Provider>
   );

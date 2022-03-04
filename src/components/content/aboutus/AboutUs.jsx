@@ -11,9 +11,12 @@ import gameConsole from "../../../assets/images/console.png";
 import boardgame from "../../../assets/images/boardgame.png";
 import { ElementNames } from "../../navbar/NavbarData";
 import { Parallax } from "react-parallax";
+import { IsMobileContext } from "../../../App";
+import { useContext } from "react";
 
 export default function AboutUs() {
   const { t } = useTranslation();
+  const isMobile = useContext(IsMobileContext);
   const [animationTriggered, setAnimationTriggered] = useState(false);
   const [languageChangedStateHack, setLanguageChanged] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState(i18next.language);
@@ -38,7 +41,7 @@ export default function AboutUs() {
 
   return (
     <Element name={ElementNames.aboutUs}>
-      <Parallax bgImage="https://i.postimg.cc/2y0MznJH/IMG-2062.jpg" strength={1000} bgImageStyle={{opacity: '.2'}}>
+      <Parallax bgImage="https://i.postimg.cc/2y0MznJH/IMG-2062.jpg" strength={isMobile() ? 300 : 500} bgImageStyle={{opacity: '.2'}}>
       <section className="aboutus-section">
         <div className="aboutus-header">
           <InView
