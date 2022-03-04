@@ -45,7 +45,7 @@
   "promotion_card_wen_back_disc_key": "-2 PLN",
 
   "promotion_card_thu_front_desc_key": "CZ",
-  "promotion_card_thu_back_header_key": "PIWO 0.5 LANE",
+  "promotion_card_thu_back_header_key": "PIWO 0.5 LANE DLA STUDENTÓW",
   "promotion_card_thu_back_disc_key": "10 PLN",
 
   "promotion_card_fri_front_desc_key": "PI",
@@ -53,11 +53,11 @@
   "promotion_card_fri_back_disc_key": "1L SOKU LUB COLA GRATIS",
 
   "promotion_card_sat_front_desc_key": "SO",
-  "promotion_card_sat_back_header_key": "DRINK",
+  "promotion_card_sat_back_header_key": "DO 21:00 DRINK",
   "promotion_card_sat_back_disc_key": "-5 PLN",
   
   "promotion_card_sun_front_desc_key": "NI",
-  "promotion_card_sun_back_header_key": "DRINK",
+  "promotion_card_sun_back_header_key": "DO 21:00 DRINK",
   "promotion_card_sun_back_disc_key": "-5 PLN",
 
 

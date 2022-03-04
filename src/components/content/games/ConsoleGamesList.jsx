@@ -19,14 +19,24 @@ export const ConsoleGamesList = [
     img: "https://i.postimg.cc/fL8NZkD5/tekken-tournament.jpg",
     yt: "https://www.youtube.com/embed/RqskWK_mj1E"
   },
-  // {
-  //   title: "RAYMAN LEGENDS",
-  //   img: "https://i.postimg.cc/T1kjbwPc/0-0-product-Gfx-dd5f61759f59d61266ce7e642189dc82.jpg",
-  //   yt: "https://www.youtube.com/embed/RqskWK_mj1E"
-  // },
   {
     title: "FORZA 7",
     img: "https://i.postimg.cc/Prpjstcz/forza-motorsport-7-cover-packshot.jpg",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "UFC 3",
+    img: "https://i.postimg.cc/CMXxMq8Q/ufc3.jpg",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "OVERCOOKED",
+    img: "https://i.postimg.cc/rz2T15Cy/overcooked.jpg",
+    yt: "https://www.youtube.com/embed/RqskWK_mj1E"
+  },
+  {
+    title: "OVERCOOKED 2",
+    img: "https://i.postimg.cc/yYCWXRNS/overcooked-2-pc-mac-game-steam-cover.jpg",
     yt: "https://www.youtube.com/embed/RqskWK_mj1E"
   },
   {

@@ -4,7 +4,7 @@ import { ElementNames } from "../../navbar/NavbarData";
 import Card from "./Card";
 import ShotsImg from "../../../assets/images/promotion/shots.jpg";
 import SyropImg from "../../../assets/images/promotion/syrop.png";
-import LocalBeerImg from "../../../assets/images/promotion/local_beer.jpg";
+import LocalBeerImg from "../../../assets/images/promotion/local_beer.png";
 import BeerImg from "../../../assets/images/promotion/beer.png";
 import VodkaImg from "../../../assets/images/promotion/vodka.png";
 import DrinkImg from "../../../assets/images/promotion/drink.png";
