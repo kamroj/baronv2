@@ -10,6 +10,7 @@ import dimension from "../../../assets/images/dimension.png";
 import gameConsole from "../../../assets/images/console.png";
 import boardgame from "../../../assets/images/boardgame.png";
 import { ElementNames } from "../../navbar/NavbarData";
+import { Parallax } from "react-parallax";
 
 export default function AboutUs() {
   const { t } = useTranslation();
@@ -37,6 +38,7 @@ export default function AboutUs() {
 
   return (
     <Element name={ElementNames.aboutUs}>
+      <Parallax bgImage="https://i.postimg.cc/2y0MznJH/IMG-2062.jpg" strength={1000} bgImageStyle={{opacity: '.2'}}>
       <section className="aboutus-section">
         <div className="aboutus-header">
           <InView
@@ -78,6 +80,7 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+      </Parallax>
     </Element>
   );
 }
