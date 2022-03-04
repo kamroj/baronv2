@@ -9,4 +9,7 @@ export const BaronImageUrls = [
   { original: "https://i.postimg.cc/VvSp92RX/IMG-1768.jpg" },
   { original: "https://i.postimg.cc/rpJBq1sR/IMG-1839.jpg" },
   { original: "https://i.postimg.cc/DZpRX7q2/IMG-1867.jpg" },
+  { original: "https://i.postimg.cc/qq1NrMTs/IMG-2060.jpg" },
+  { original: "https://i.postimg.cc/3N8kz0Pr/IMG-2063.jpg" },
+  { original: "https://i.postimg.cc/sfmQ7KhM/IMG-2066.jpg" },
 ];
